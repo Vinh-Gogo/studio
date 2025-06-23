@@ -8,36 +8,35 @@ export function Footer() {
   const { t } = useLanguage()
   const year = new Date().getFullYear();
 
-  const infoPortals = [
-    { label: t('footerStudentPortal'), href: '#' },
-    { label: t('footerLecturerPortal'), href: '#' },
-    { label: t('footerScienceMng'), href: '#' },
-    { label: t('footerTrainingPoints'), href: '#' },
-    { label: t('footerJobPortal'), href: '#' },
+  const aboutLinks = [
+    { label: t('generalIntroduction'), href: '/department' },
+    { label: t('functionsAndMission'), href: '/department/functions-mission' },
+    { label: t('historyAndAchievements'), href: '/department/history-achievements' },
   ];
 
-  const extendedInfo = [
-    { label: t('footerPress'), href: '#' },
-    { label: t('footerDiscoverIuh'), href: '#' },
-    { label: t('footerSoftSkills'), href: '#' },
-    { label: t('footerCollection'), href: '#' },
-    { label: t('footerCustomerService'), href: '#' },
+  const newsLinks = [
+    { label: t('activityUpdates'), href: '/news?category=updates' },
+    { label: t('biddingNotices'), href: '/news?category=bidding' },
+    { label: t('workSchedule'), href: '/news?category=schedule' },
   ];
 
-  const utilityDocs = [
-    { label: t('footerThreePublics'), href: '#' },
-    { label: t('footerRegulations'), href: '/documents/decisions-regulations' },
-    { label: t('footerTrainingForms'), href: '#' },
-    { label: t('footerScienceForms'), href: '#' },
-    { label: t('contact'), href: '/contact' },
+  const projectLinks = [
+    { label: t('ongoingProjects'), href: '/projects' },
+    { label: t('completedProjects'), href: '/projects/completed' },
+    { label: t('procurementList'), href: '/projects/plans' },
+  ];
+  
+  const helpLinks = [
+      { label: t('faq'), href: '/faq' },
+      { label: t('contact'), href: '/contact' },
   ];
 
   return (
     <footer className="bg-accent text-accent-foreground">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-5">
           {/* Column 1: Contact Info */}
-          <div>
+          <div className="lg:col-span-1">
             <h3 className="font-semibold mb-4 font-headline uppercase">{t('portalName')}</h3>
             <address className="not-italic text-sm space-y-3">
               <div className="flex items-start gap-3">
@@ -60,11 +59,11 @@ export function Footer() {
             </address>
           </div>
 
-          {/* Column 2: Info Portals */}
+          {/* Column 2: About Us */}
           <div>
-            <h3 className="font-semibold mb-4 font-headline uppercase">{t('footerInfoPortals')}</h3>
+            <h3 className="font-semibold mb-4 font-headline uppercase">{t('footerAbout')}</h3>
             <ul className="space-y-2 text-sm">
-              {infoPortals.map((link, index) => (
+              {aboutLinks.map((link, index) => (
                 <li key={index}>
                   <Link href={link.href} className="hover:underline">{link.label}</Link>
                 </li>
@@ -72,11 +71,11 @@ export function Footer() {
             </ul>
           </div>
           
-          {/* Column 3: Extended Info */}
+          {/* Column 3: News */}
           <div>
-            <h3 className="font-semibold mb-4 font-headline uppercase">{t('footerExtendedInfo')}</h3>
+            <h3 className="font-semibold mb-4 font-headline uppercase">{t('footerNews')}</h3>
             <ul className="space-y-2 text-sm">
-              {extendedInfo.map((link, index) => (
+              {newsLinks.map((link, index) => (
                 <li key={index}>
                   <Link href={link.href} className="hover:underline">{link.label}</Link>
                 </li>
@@ -84,11 +83,23 @@ export function Footer() {
             </ul>
           </div>
           
-          {/* Column 4: Utility Docs */}
+          {/* Column 4: Projects */}
           <div>
-            <h3 className="font-semibold mb-4 font-headline uppercase">{t('footerUtilityDocs')}</h3>
+            <h3 className="font-semibold mb-4 font-headline uppercase">{t('footerProjects')}</h3>
             <ul className="space-y-2 text-sm">
-              {utilityDocs.map((link, index) => (
+              {projectLinks.map((link, index) => (
+                <li key={index}>
+                  <Link href={link.href} className="hover:underline">{link.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Column 5: Help & Contact */}
+          <div>
+            <h3 className="font-semibold mb-4 font-headline uppercase">{t('footerHelp')}</h3>
+            <ul className="space-y-2 text-sm">
+              {helpLinks.map((link, index) => (
                 <li key={index}>
                   <Link href={link.href} className="hover:underline">{link.label}</Link>
                 </li>
