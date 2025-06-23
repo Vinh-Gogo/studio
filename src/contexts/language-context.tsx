@@ -17,11 +17,11 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<Language>('vi'); // Default to Vietnamese
 
-  const t = (key: TranslationKey, params?: {[key: string]: string | number}): string => {
+  const t = (key: TranslationKey, templateParams?: {[key: string]: string | number}): string => {
     let text = translations[language][key] || translations['en'][key];
-    if (params) {
-      Object.keys(params).forEach(pKey => {
-        text = text.replace(`{${pKey}}`, String(params[pKey]));
+    if (templateParams) {
+      Object.keys(templateParams).forEach(pKey => {
+        text = text.replace(`{${pKey}}`, String(templateParams[pKey]));
       });
     }
     return text;
