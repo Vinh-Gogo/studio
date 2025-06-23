@@ -21,7 +21,7 @@ export const newsData: Multilingual<News> = {
       title: "New Public Service Center Launch",
       date: "2024-07-20",
       category: "Activity Updates",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1713948414133-c2cf74951e9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwNjY4NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "A new state-of-the-art public service center has been inaugurated to streamline citizen services. The center is equipped with modern technology to reduce waiting times and improve efficiency. It will offer over 50 different types of services under one roof."
     },
     {
@@ -30,7 +30,7 @@ export const newsData: Multilingual<News> = {
       title: "Invitation for Office Supply Quotations",
       date: "2024-07-18",
       category: "Price Quotations",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1737255287794-24ce61ded34a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwNjY4NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "We are inviting sealed quotations from eligible bidders for the procurement of office supplies for the fiscal year 2025. The deadline for submission is August 15, 2024. Please refer to the documents section for the detailed tender notice."
     },
     {
@@ -39,7 +39,7 @@ export const newsData: Multilingual<News> = {
       title: "Digital Transformation Seminar Held",
       date: "2024-07-15",
       category: "Activity Updates",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1722684768315-11fc753354f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwNjY4NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "A successful seminar on digital transformation in governance was held, attended by experts from across the country. Key topics included AI in public administration, data security, and e-governance platforms."
     },
     {
@@ -48,7 +48,7 @@ export const newsData: Multilingual<News> = {
       title: "National Day Celebration Plans Announced",
       date: "2024-07-10",
       category: "Other News",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1720025352295-953d7ad65b1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bmV3cyUyMGFydGljbGUlMjBnb3Zlcm5tZW50fGVufDB8fHx8MTc1MDY2ODY1NHww&ixlib=rb-4.1.0&q=80&w=1080",
       content: "The department has announced the schedule for the upcoming National Day celebrations. The event will include a parade, cultural performances, and a fireworks display. All citizens are welcome to join."
     },
     {
@@ -57,7 +57,7 @@ export const newsData: Multilingual<News> = {
       title: "Major Infrastructure Project Completed Ahead of Schedule",
       date: "2024-07-05",
       category: "Activity Updates",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1621672134447-5c576fdef903?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwNjY4NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "The Highway 1 expansion project has been completed two months ahead of schedule, easing traffic congestion and boosting regional connectivity. The project was a collaborative effort between multiple government agencies."
     }
   ],
@@ -68,7 +68,7 @@ export const newsData: Multilingual<News> = {
       title: "Ra mắt Trung tâm Dịch vụ Công mới",
       date: "20-07-2024",
       category: "Activity Updates",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1713948414133-c2cf74951e9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwNjY4NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Một trung tâm dịch vụ công hiện đại đã được khánh thành nhằm hợp lý hóa các dịch vụ cho người dân. Trung tâm được trang bị công nghệ hiện đại để giảm thời gian chờ đợi và nâng cao hiệu quả. Nơi đây sẽ cung cấp hơn 50 loại dịch vụ khác nhau."
     },
     {
@@ -77,7 +77,7 @@ export const newsData: Multilingual<News> = {
       title: "Mời báo giá cung cấp văn phòng phẩm",
       date: "18-07-2024",
       category: "Price Quotations",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1737255287794-24ce61ded34a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwNjY4NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Chúng tôi mời các nhà thầu đủ điều kiện nộp báo giá kín cho việc mua sắm văn phòng phẩm cho năm tài chính 2025. Hạn chót nộp hồ sơ là ngày 15 tháng 8 năm 2024. Vui lòng tham khảo mục tài liệu để biết thông báo mời thầu chi tiết."
     },
     {
@@ -86,7 +86,7 @@ export const newsData: Multilingual<News> = {
       title: "Tổ chức Hội thảo Chuyển đổi số",
       date: "15-07-2024",
       category: "Activity Updates",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1722684768315-11fc753354f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwNjY4NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Một hội thảo thành công về chuyển đổi số trong quản trị đã được tổ chức với sự tham dự của các chuyên gia trên cả nước. Các chủ đề chính bao gồm AI trong hành chính công, an ninh dữ liệu và các nền tảng chính phủ điện tử."
     },
     {
@@ -95,7 +95,7 @@ export const newsData: Multilingual<News> = {
       title: "Công bố kế hoạch kỷ niệm Ngày Quốc khánh",
       date: "10-07-2024",
       category: "Other News",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1720025352295-953d7ad65b1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bmV3cyUyMGFydGljbGUlMjBnb3Zlcm5tZW50fGVufDB8fHx8MTc1MDY2ODY1NHww&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Sở đã công bố lịch trình cho các hoạt động kỷ niệm Ngày Quốc khánh sắp tới. Sự kiện sẽ bao gồm diễu hành, biểu diễn văn hóa và bắn pháo hoa. Mời tất cả người dân tham gia."
     },
     {
@@ -104,7 +104,7 @@ export const newsData: Multilingual<News> = {
       title: "Dự án hạ tầng lớn hoàn thành trước tiến độ",
       date: "05-07-2024",
       category: "Activity Updates",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1621672134447-5c576fdef903?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwNjY4NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Dự án mở rộng Quốc lộ 1 đã hoàn thành trước hai tháng so với kế hoạch, giúp giảm ùn tắc giao thông và tăng cường kết nối khu vực. Dự án là nỗ lực hợp tác giữa nhiều cơ quan chính phủ."
     }
   ]
