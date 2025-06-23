@@ -1,9 +1,8 @@
-
 "use client"
 
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
-import { Menu, Search, X, ChevronDown, Landmark, Monitor, Mail, Library } from "lucide-react"
+import { Menu, Search, X, ChevronDown, Monitor, Mail, Library } from "lucide-react"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -18,6 +17,7 @@ import { cn } from "@/lib/utils"
 import React from "react"
 import { useLanguage } from "@/contexts/language-context"
 import { LanguageSwitcher } from "../language-switcher"
+import { IuhLogo } from "../ui/iuh-logo"
 
 function SearchBar({ variant = "default" }: { variant?: "default" | "topbar" }) {
     const router = useRouter();
@@ -55,17 +55,7 @@ function SearchBar({ variant = "default" }: { variant?: "default" | "topbar" }) 
 }
 
 const SiteLogo = () => {
-    const { t } = useLanguage()
-    return (
-        <div className="flex items-center gap-2">
-            <Landmark className="h-10 w-10 text-primary" />
-            <div className="flex flex-col justify-center">
-                <span className="font-bold text-sm leading-tight whitespace-nowrap text-primary">
-                {t('portalName')}
-                </span>
-            </div>
-        </div>
-    )
+    return <IuhLogo />
 }
 
 export function Header() {
@@ -91,7 +81,7 @@ export function Header() {
         { href: "/department/history-achievements", label: t('historyAndAchievements') },
       ]
     },
-    { href: "/personnel/leadership", label: t('personnel'), key: 'personnel' },
+    { href: "/personnel", label: t('personnel'), key: 'personnel' },
     { 
       key: 'news',
       label: t('news'),
