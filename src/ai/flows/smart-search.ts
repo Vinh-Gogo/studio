@@ -31,7 +31,7 @@ const prompt = ai.definePrompt({
   name: 'smartSearchPrompt',
   input: {schema: SmartSearchInputSchema},
   output: {schema: SmartSearchOutputSchema},
-  prompt: `You are an AI-powered search assistant for the PKHDTIUH Portal.
+  prompt: `You are an AI-powered search assistant for the PHÒNG KẾ HOẠCH - ĐẦU TƯ Portal.
 
   Your goal is to provide the most relevant information from across the website in response to the user's query.
 

@@ -9,8 +9,8 @@ export const translations = {
     projects: 'Projects',
     documents: 'Documents',
     aiSearch: 'AI Search...',
-    portalName: 'PKHDTIUH Portal',
-    portalShortName: 'PKHDTIUH',
+    portalName: 'PLANNING - INVESTMENT DEPARTMENT',
+    portalShortName: 'PLANNING-INVESTMENT',
     generalIntroduction: 'General Introduction',
     functionsAndMission: 'Functions & Mission',
     historyAndAchievements: 'History & Achievements',
@@ -24,10 +24,10 @@ export const translations = {
     aboutUs: 'About Us',
     contactUs: 'Contact Us',
     address: '123 Government Ave, Capital City, Vietnam',
-    copyright: '© {year} PKHDTIUH Portal. All rights reserved.',
+    copyright: '© {year} PLANNING - INVESTMENT DEPARTMENT. All rights reserved.',
 
     // Home Page
-    bannerTitle: 'PKHDTIUH Portal',
+    bannerTitle: 'PLANNING - INVESTMENT DEPARTMENT',
     bannerSubtitle: 'Your central hub for information, services, and updates from our department.',
     learnMore: 'Learn More About Us',
     latestNews: 'Latest News & Announcements',
@@ -101,8 +101,8 @@ export const translations = {
     trySearching: 'Try searching for topics like "office supply quotations" or "digital transformation seminar".',
 
     // Metadata
-    metaTitle: 'PKHDTIUH Portal',
-    metaDescription: 'The official portal for PKHDTIUH.',
+    metaTitle: 'PLANNING - INVESTMENT DEPARTMENT',
+    metaDescription: 'The official portal for PLANNING - INVESTMENT DEPARTMENT.',
   },
   vi: {
     // Header
@@ -113,8 +113,8 @@ export const translations = {
     projects: 'Dự án',
     documents: 'Văn bản',
     aiSearch: 'Tìm kiếm AI...',
-    portalName: 'Cổng thông tin PKHDTIUH',
-    portalShortName: 'PKHDTIUH',
+    portalName: 'PHÒNG KẾ HOẠCH - ĐẦU TƯ',
+    portalShortName: 'PHÒNG KH-ĐT',
     generalIntroduction: 'Giới thiệu chung',
     functionsAndMission: 'Chức năng – Nhiệm vụ',
     historyAndAchievements: 'Lịch sử hình thành & Thành tích',
@@ -128,10 +128,10 @@ export const translations = {
     aboutUs: 'Về chúng tôi',
     contactUs: 'Liên hệ',
     address: '123 Đường Chính Phủ, Thủ đô, Việt Nam',
-    copyright: '© {year} Cổng thông tin PKHDTIUH. Đã đăng ký bản quyền.',
+    copyright: '© {year} PHÒNG KẾ HOẠCH - ĐẦU TƯ. Đã đăng ký bản quyền.',
 
     // Home Page
-    bannerTitle: 'Cổng thông tin PKHDTIUH',
+    bannerTitle: 'PHÒNG KẾ HOẠCH - ĐẦU TƯ',
     bannerSubtitle: 'Trung tâm thông tin, dịch vụ và cập nhật tập trung từ phòng ban của chúng tôi.',
     learnMore: 'Tìm hiểu thêm về chúng tôi',
     latestNews: 'Tin tức & Thông báo mới nhất',
@@ -205,8 +205,8 @@ export const translations = {
     trySearching: 'Hãy thử tìm kiếm các chủ đề như "báo giá vật tư văn phòng" hoặc "hội thảo chuyển đổi số".',
     
     // Metadata
-    metaTitle: 'Cổng thông tin PKHDTIUH',
-    metaDescription: 'Cổng thông tin chính thức của PKHDTIUH.',
+    metaTitle: 'PHÒNG KẾ HOẠCH - ĐẦU TƯ',
+    metaDescription: 'Cổng thông tin chính thức của PHÒNG KẾ HOẠCH - ĐẦU TƯ.',
   },
 };
 

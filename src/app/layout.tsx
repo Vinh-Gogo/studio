@@ -7,8 +7,8 @@ import { LanguageProvider } from '@/contexts/language-context';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Cổng thông tin PKHDTIUH',
-  description: 'Cổng thông tin chính thức của PKHDTIUH.',
+  title: 'PHÒNG KẾ HOẠCH - ĐẦU TƯ',
+  description: 'Cổng thông tin chính thức của PHÒNG KẾ HOẠCH - ĐẦU TƯ.',
 };
 
 export default function RootLayout({

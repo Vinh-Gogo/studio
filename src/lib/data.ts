@@ -122,20 +122,20 @@ export type Personnel = {
 
 export const personnelData: Multilingual<Personnel> = {
     en: [
-        { id: 1, name: "Nguyen Van A", title: "Director General", photo: "https://placehold.co/200x200.png", email: "nva@pkhdtiuh.gov.vn", phone: "012-345-6789", isLeadership: true },
-        { id: 2, name: "Tran Thi B", title: "Deputy Director", photo: "https://placehold.co/200x200.png", email: "ttb@pkhdtiuh.gov.vn", phone: "012-345-6788", isLeadership: true },
-        { id: 3, name: "Le Van C", title: "Head of Administration", photo: "https://placehold.co/200x200.png", email: "lvc@pkhdtiuh.gov.vn", phone: "012-345-6787", isLeadership: false },
-        { id: 4, name: "Pham Thi D", title: "IT Specialist", photo: "https://placehold.co/200x200.png", email: "ptd@pkhdtiuh.gov.vn", phone: "012-345-6786", isLeadership: false },
-        { id: 5, name: "Hoang Van E", title: "Project Manager", photo: "https://placehold.co/200x200.png", email: "hve@pkhdtiuh.gov.vn", phone: "012-345-6785", isLeadership: false },
-        { id: 6, name: "Do Thi F", title: "Accountant", photo: "https://placehold.co/200x200.png", email: "dtf@pkhdtiuh.gov.vn", phone: "012-345-6784", isLeadership: false },
+        { id: 1, name: "Nguyen Van A", title: "Director General", photo: "https://placehold.co/200x200.png", email: "nva@phongkhdt.iuh.edu.vn", phone: "012-345-6789", isLeadership: true },
+        { id: 2, name: "Tran Thi B", title: "Deputy Director", photo: "https://placehold.co/200x200.png", email: "ttb@phongkhdt.iuh.edu.vn", phone: "012-345-6788", isLeadership: true },
+        { id: 3, name: "Le Van C", title: "Head of Administration", photo: "https://placehold.co/200x200.png", email: "lvc@phongkhdt.iuh.edu.vn", phone: "012-345-6787", isLeadership: false },
+        { id: 4, name: "Pham Thi D", title: "IT Specialist", photo: "https://placehold.co/200x200.png", email: "ptd@phongkhdt.iuh.edu.vn", phone: "012-345-6786", isLeadership: false },
+        { id: 5, name: "Hoang Van E", title: "Project Manager", photo: "https://placehold.co/200x200.png", email: "hve@phongkhdt.iuh.edu.vn", phone: "012-345-6785", isLeadership: false },
+        { id: 6, name: "Do Thi F", title: "Accountant", photo: "https://placehold.co/200x200.png", email: "dtf@phongkhdt.iuh.edu.vn", phone: "012-345-6784", isLeadership: false },
     ],
     vi: [
-        { id: 1, name: "Nguyễn Văn A", title: "Tổng Giám đốc", photo: "https://placehold.co/200x200.png", email: "nva@pkhdtiuh.gov.vn", phone: "012-345-6789", isLeadership: true },
-        { id: 2, name: "Trần Thị B", title: "Phó Giám đốc", photo: "https://placehold.co/200x200.png", email: "ttb@pkhdtiuh.gov.vn", phone: "012-345-6788", isLeadership: true },
-        { id: 3, name: "Lê Văn C", title: "Trưởng phòng Hành chính", photo: "https://placehold.co/200x200.png", email: "lvc@pkhdtiuh.gov.vn", phone: "012-345-6787", isLeadership: false },
-        { id: 4, name: "Phạm Thị D", title: "Chuyên viên CNTT", photo: "https://placehold.co/200x200.png", email: "ptd@pkhdtiuh.gov.vn", phone: "012-345-6786", isLeadership: false },
-        { id: 5, name: "Hoàng Văn E", title: "Quản lý dự án", photo: "https://placehold.co/200x200.png", email: "hve@pkhdtiuh.gov.vn", phone: "012-345-6785", isLeadership: false },
-        { id: 6, name: "Đỗ Thị F", title: "Kế toán", photo: "https://placehold.co/200x200.png", email: "dtf@pkhdtiuh.gov.vn", phone: "012-345-6784", isLeadership: false },
+        { id: 1, name: "Nguyễn Văn A", title: "Tổng Giám đốc", photo: "https://placehold.co/200x200.png", email: "nva@phongkhdt.iuh.edu.vn", phone: "012-345-6789", isLeadership: true },
+        { id: 2, name: "Trần Thị B", title: "Phó Giám đốc", photo: "https://placehold.co/200x200.png", email: "ttb@phongkhdt.iuh.edu.vn", phone: "012-345-6788", isLeadership: true },
+        { id: 3, name: "Lê Văn C", title: "Trưởng phòng Hành chính", photo: "https://placehold.co/200x200.png", email: "lvc@phongkhdt.iuh.edu.vn", phone: "012-345-6787", isLeadership: false },
+        { id: 4, name: "Phạm Thị D", title: "Chuyên viên CNTT", photo: "https://placehold.co/200x200.png", email: "ptd@phongkhdt.iuh.edu.vn", phone: "012-345-6786", isLeadership: false },
+        { id: 5, name: "Hoàng Văn E", title: "Quản lý dự án", photo: "https://placehold.co/200x200.png", email: "hve@phongkhdt.iuh.edu.vn", phone: "012-345-6785", isLeadership: false },
+        { id: 6, name: "Đỗ Thị F", title: "Kế toán", photo: "https://placehold.co/200x200.png", email: "dtf@phongkhdt.iuh.edu.vn", phone: "012-345-6784", isLeadership: false },
     ]
 };
 
