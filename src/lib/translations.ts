@@ -144,9 +144,8 @@ export const translations = {
     reportsAndStatistics: 'Reports & Statistics',
 
     // Top bar
-    eOffice: 'E-OFFICE',
     email: 'EMAIL',
-    libraryInfo: 'LIBRARY - INFORMATION',
+    libraryInfo: 'PLANNING - INVESTMENT DEPARTMENT - INDUSTRIAL UNIVERSITY OF HOCHIMINH CITY',
     connectContact: 'CONNECT | CONTACT',
   },
   vi: {
@@ -292,9 +291,8 @@ export const translations = {
     reportsAndStatistics: 'Báo cáo – Thống kê',
 
     // Top bar
-    eOffice: 'E-OFFICE',
     email: 'EMAIL',
-    libraryInfo: 'THƯ VIỆN - THÔNG TIN',
+    libraryInfo: 'PHÒNG KẾ HOẠCH - ĐẦU TƯ - TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP TP.HCM',
     connectContact: 'KẾT NỐI | LIÊN HỆ',
   },
 };
