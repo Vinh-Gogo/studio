@@ -1,3 +1,4 @@
+
 "use client"
 
 import Link from "next/link"
@@ -9,18 +10,12 @@ import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
 import React from "react"
-
-const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/department", label: "Department" },
-  { href: "/personnel", label: "Personnel" },
-  { href: "/news", label: "News" },
-  { href: "/projects", label: "Projects" },
-  { href: "/documents", label: "Documents" },
-]
+import { useLanguage } from "@/contexts/language-context"
+import { LanguageSwitcher } from "../language-switcher"
 
 function SearchBar() {
     const router = useRouter();
+    const { t } = useLanguage();
 
     const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -35,7 +30,7 @@ function SearchBar() {
         <form onSubmit={handleSearch} className="relative w-full max-w-sm">
             <Input
                 name="query"
-                placeholder="AI Search..."
+                placeholder={t('aiSearch')}
                 className="pr-10"
             />
             <Button type="submit" variant="ghost" size="icon" className="absolute top-0 right-0 h-full w-10">
@@ -45,11 +40,20 @@ function SearchBar() {
     );
 }
 
-
 export function Header() {
   const isMobile = useIsMobile()
   const pathname = usePathname()
   const [isSheetOpen, setSheetOpen] = React.useState(false);
+  const { t } = useLanguage();
+
+  const navLinks = [
+    { href: "/", label: t('home') },
+    { href: "/department", label: t('department') },
+    { href: "/personnel", label: t('personnel') },
+    { href: "/news", label: t('news') },
+    { href: "/projects", label: t('projects') },
+    { href: "/documents", label: t('documents') },
+  ]
 
   const NavContent = () => (
     <>
@@ -70,39 +74,45 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2 font-bold text-lg">
           <Landmark className="h-7 w-7 text-primary" />
-          <span className="hidden sm:inline-block font-headline">PKHDTIUH Portal</span>
+          <span className="hidden sm:inline-block font-headline">{t('portalName')}</span>
         </Link>
         
         {isMobile ? (
-          <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-full max-w-xs p-4">
-               <div className="flex justify-between items-center mb-6">
-                 <Link href="/" className="flex items-center gap-2 font-bold text-lg" onClick={() => setSheetOpen(false)}>
-                    <Landmark className="h-6 w-6 text-primary" />
-                    <span className="font-headline">PKHDTIUH</span>
-                </Link>
-                <Button variant="ghost" size="icon" onClick={() => setSheetOpen(false)}>
-                    <X className="h-6 w-6"/>
+          <div className="flex items-center gap-2">
+            <LanguageSwitcher />
+            <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
                 </Button>
-               </div>
-              <nav className="flex flex-col gap-2 mb-6">
-                <NavContent />
-              </nav>
-              <SearchBar />
-            </SheetContent>
-          </Sheet>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-full max-w-xs p-4 flex flex-col">
+                 <div className="flex justify-between items-center mb-6">
+                   <Link href="/" className="flex items-center gap-2 font-bold text-lg" onClick={() => setSheetOpen(false)}>
+                      <Landmark className="h-6 w-6 text-primary" />
+                      <span className="font-headline">{t('portalShortName')}</span>
+                  </Link>
+                  <Button variant="ghost" size="icon" onClick={() => setSheetOpen(false)}>
+                      <X className="h-6 w-6"/>
+                  </Button>
+                 </div>
+                <nav className="flex flex-col gap-2 mb-6">
+                  <NavContent />
+                </nav>
+                <div className="mt-auto">
+                  <SearchBar />
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         ) : (
           <>
             <nav className="hidden md:flex items-center gap-2">
               <NavContent />
             </nav>
-            <div className="hidden md:block">
+            <div className="hidden md:flex items-center gap-4">
               <SearchBar />
+              <LanguageSwitcher />
             </div>
           </>
         )}

@@ -1,7 +1,8 @@
+
+"use client"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Building, Briefcase, Users, Newspaper } from "lucide-react"
-
+import { ArrowRight, Building, Briefcase, Users } from "lucide-react"
 import {
   Carousel,
   CarouselContent,
@@ -12,9 +13,12 @@ import {
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { newsData } from "@/lib/data"
+import { useLanguage } from "@/contexts/language-context"
 
 export default function Home() {
-  const latestNews = newsData.slice(0, 5);
+  const { t, language } = useLanguage()
+  const currentNewsData = newsData[language]
+  const latestNews = currentNewsData.slice(0, 5);
 
   return (
     <div className="flex flex-col">
@@ -30,14 +34,14 @@ export default function Home() {
         />
         <div className="relative z-10 text-center p-4">
           <h1 className="text-4xl md:text-6xl font-headline font-bold drop-shadow-md">
-            PKHDTIUH Portal
+            {t('bannerTitle')}
           </h1>
           <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto drop-shadow-sm">
-            Your central hub for information, services, and updates from our department.
+            {t('bannerSubtitle')}
           </p>
           <Button asChild className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
             <Link href="/department">
-              Learn More About Us <ArrowRight className="ml-2 h-5 w-5" />
+              {t('learnMore')} <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
         </div>
@@ -46,7 +50,7 @@ export default function Home() {
       {/* News Slider Section */}
       <section className="py-12 md:py-20 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-headline font-bold text-center mb-10">Latest News & Announcements</h2>
+          <h2 className="text-3xl font-headline font-bold text-center mb-10">{t('latestNews')}</h2>
           <Carousel
             opts={{
               align: "start",
@@ -76,7 +80,7 @@ export default function Home() {
                       </CardContent>
                       <div className="p-6 pt-0">
                          <Button asChild variant="link" className="p-0 h-auto">
-                           <Link href={`/news/${news.slug}`}>Read More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                           <Link href={`/news/${news.slug}`}>{t('readMore')} <ArrowRight className="ml-2 h-4 w-4" /></Link>
                          </Button>
                       </div>
                     </Card>
@@ -89,7 +93,7 @@ export default function Home() {
           </Carousel>
           <div className="text-center mt-8">
             <Button asChild variant="outline">
-              <Link href="/news">View All News</Link>
+              <Link href="/news">{t('viewAllNews')}</Link>
             </Button>
           </div>
         </div>
@@ -101,26 +105,26 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="flex flex-col items-center">
               <Building className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-2xl font-headline font-semibold mb-2">Our Department</h3>
-              <p className="text-muted-foreground mb-4">Discover our history, functions, and achievements.</p>
+              <h3 className="text-2xl font-headline font-semibold mb-2">{t('ourDepartment')}</h3>
+              <p className="text-muted-foreground mb-4">{t('ourDepartmentDesc')}</p>
               <Button asChild variant="secondary">
-                <Link href="/department">Explore Department</Link>
+                <Link href="/department">{t('exploreDepartment')}</Link>
               </Button>
             </div>
             <div className="flex flex-col items-center">
               <Users className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-2xl font-headline font-semibold mb-2">Our People</h3>
-              <p className="text-muted-foreground mb-4">Meet our leadership and dedicated staff members.</p>
+              <h3 className="text-2xl font-headline font-semibold mb-2">{t('ourPeople')}</h3>
+              <p className="text-muted-foreground mb-4">{t('ourPeopleDesc')}</p>
               <Button asChild variant="secondary">
-                <Link href="/personnel">See Personnel</Link>
+                <Link href="/personnel">{t('seePersonnel')}</Link>
               </Button>
             </div>
             <div className="flex flex-col items-center">
               <Briefcase className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-2xl font-headline font-semibold mb-2">Our Work</h3>
-              <p className="text-muted-foreground mb-4">Learn about our ongoing projects and future plans.</p>
+              <h3 className="text-2xl font-headline font-semibold mb-2">{t('ourWork')}</h3>
+              <p className="text-muted-foreground mb-4">{t('ourWorkDesc')}</p>
               <Button asChild variant="secondary">
-                <Link href="/projects">View Projects</Link>
+                <Link href="/projects">{t('viewProjects')}</Link>
               </Button>
             </div>
           </div>

@@ -1,3 +1,5 @@
+
+"use client"
 import Link from "next/link"
 import Image from "next/image"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -5,10 +7,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter }
 import { Button } from "@/components/ui/button"
 import { newsData, type News } from "@/lib/data"
 import { ArrowRight } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
-function NewsGrid({ news }: { news: News[] }) {
+function NewsGrid({ news, readMoreText }: { news: News[], readMoreText: string }) {
   if (news.length === 0) {
-    return <p className="text-muted-foreground mt-8 text-center">No news in this category yet.</p>;
+    return <p className="text-muted-foreground mt-8 text-center">{useLanguage().t('noNewsInCategory')}</p>;
   }
   
   return (
@@ -32,7 +35,7 @@ function NewsGrid({ news }: { news: News[] }) {
           </CardContent>
           <CardFooter>
             <Button asChild variant="link" className="p-0 h-auto">
-              <Link href={`/news/${item.slug}`}>Read More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+              <Link href={`/news/${item.slug}`}>{readMoreText} <ArrowRight className="ml-2 h-4 w-4" /></Link>
             </Button>
           </CardFooter>
         </Card>
@@ -42,37 +45,41 @@ function NewsGrid({ news }: { news: News[] }) {
 }
 
 export default function NewsPage() {
-  const activityUpdates = newsData.filter(n => n.category === "Activity Updates");
-  const priceQuotations = newsData.filter(n => n.category === "Price Quotations");
-  const otherNews = newsData.filter(n => n.category === "Other News");
+  const { t, language } = useLanguage()
+  const currentNewsData = newsData[language]
+
+  const activityUpdates = currentNewsData.filter(n => n.category === "Activity Updates");
+  const priceQuotations = currentNewsData.filter(n => n.category === "Price Quotations");
+  const otherNews = currentNewsData.filter(n => n.category === "Other News");
+  const readMoreText = t('readMore');
 
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">News & Announcements</h1>
+        <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">{t('newsAndAnnouncements')}</h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-          Stay informed with the latest updates, notices, and developments from our department.
+          {t('newsSubtitle')}
         </p>
       </div>
 
       <Tabs defaultValue="all" className="w-full">
         <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mx-auto max-w-2xl">
-          <TabsTrigger value="all">All News</TabsTrigger>
-          <TabsTrigger value="updates">Activity Updates</TabsTrigger>
-          <TabsTrigger value="quotations">Price Quotations</TabsTrigger>
-          <TabsTrigger value="other">Other News</TabsTrigger>
+          <TabsTrigger value="all">{t('allNews')}</TabsTrigger>
+          <TabsTrigger value="updates">{t('activityUpdates')}</TabsTrigger>
+          <TabsTrigger value="quotations">{t('priceQuotations')}</TabsTrigger>
+          <TabsTrigger value="other">{t('otherNews')}</TabsTrigger>
         </TabsList>
         <TabsContent value="all">
-          <NewsGrid news={newsData} />
+          <NewsGrid news={currentNewsData} readMoreText={readMoreText} />
         </TabsContent>
         <TabsContent value="updates">
-          <NewsGrid news={activityUpdates} />
+          <NewsGrid news={activityUpdates} readMoreText={readMoreText} />
         </TabsContent>
         <TabsContent value="quotations">
-          <NewsGrid news={priceQuotations} />
+          <NewsGrid news={priceQuotations} readMoreText={readMoreText} />
         </TabsContent>
         <TabsContent value="other">
-          <NewsGrid news={otherNews} />
+          <NewsGrid news={otherNews} readMoreText={readMoreText} />
         </TabsContent>
       </Tabs>
     </div>

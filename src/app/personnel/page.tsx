@@ -1,13 +1,19 @@
+
+"use client"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { personnelData } from "@/lib/data"
 import { Mail, Phone, User } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 export default function PersonnelPage() {
-  const leadership = personnelData.filter(p => p.isLeadership);
-  const staff = personnelData.filter(p => !p.isLeadership);
+  const { t, language } = useLanguage();
+  const currentPersonnelData = personnelData[language]
 
-  const PersonnelCard = ({ person }: { person: typeof personnelData[0] }) => (
+  const leadership = currentPersonnelData.filter(p => p.isLeadership);
+  const staff = currentPersonnelData.filter(p => !p.isLeadership);
+
+  const PersonnelCard = ({ person }: { person: typeof currentPersonnelData[0] }) => (
     <Card className="text-center flex flex-col items-center p-6 hover:shadow-xl transition-shadow h-full">
       <Avatar className="w-24 h-24 mb-4">
         <AvatarImage src={person.photo} alt={person.name} data-ai-hint="professional headshot person" />
@@ -33,21 +39,21 @@ export default function PersonnelPage() {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">Organizational Structure & Personnel</h1>
+        <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">{t('personnelTitle')}</h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-          Meet the dedicated team driving our department's mission forward.
+          {t('personnelSubtitle')}
         </p>
       </div>
 
       <section className="mb-16">
-        <h2 className="text-3xl font-headline font-bold mb-8 text-center">Leadership</h2>
+        <h2 className="text-3xl font-headline font-bold mb-8 text-center">{t('leadership')}</h2>
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {leadership.map(person => <PersonnelCard key={person.id} person={person} />)}
         </div>
       </section>
 
       <section>
-        <h2 className="text-3xl font-headline font-bold mb-8 text-center">Our Staff</h2>
+        <h2 className="text-3xl font-headline font-bold mb-8 text-center">{t('ourStaff')}</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {staff.map(person => <PersonnelCard key={person.id} person={person} />)}
         </div>

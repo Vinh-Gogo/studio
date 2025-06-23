@@ -1,14 +1,24 @@
+
+"use client"
 import { newsData } from "@/lib/data"
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import { Calendar, Tag } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
+import { useLanguage } from "@/contexts/language-context"
 
 export default function NewsArticlePage({ params }: { params: { slug: string } }) {
-  const article = newsData.find(n => n.slug === params.slug)
+  const { language, t } = useLanguage();
+  const article = newsData[language].find(n => n.slug === params.slug) || newsData.en.find(n => n.slug === params.slug)
 
   if (!article) {
     notFound()
+  }
+
+  const categoryTranslations = {
+    "Activity Updates": t('activityUpdates'),
+    "Price Quotations": t('priceQuotations'),
+    "Other News": t('otherNews'),
   }
 
   return (
@@ -23,7 +33,7 @@ export default function NewsArticlePage({ params }: { params: { slug: string } }
                 </div>
                 <div className="flex items-center gap-2">
                     <Tag className="w-4 h-4" />
-                    <Badge variant="secondary">{article.category}</Badge>
+                    <Badge variant="secondary">{categoryTranslations[article.category]}</Badge>
                 </div>
             </div>
         </div>
@@ -39,8 +49,7 @@ export default function NewsArticlePage({ params }: { params: { slug: string } }
 
         <div className="prose prose-lg dark:prose-invert max-w-none text-foreground/90">
           <p>{article.content}</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-          <p>Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.</p>
+          {/* Static content can be removed or translated if needed */}
         </div>
       </article>
     </div>

@@ -1,10 +1,19 @@
+
+"use client"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { projectData, type Project } from "@/lib/data"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
+import { useLanguage } from "@/contexts/language-context"
 
-function ProjectCard({ project }: { project: Project }) {
+function ProjectCard({ project, t }: { project: Project, t: Function }) {
+  const statusTranslations = {
+    "Ongoing": t('ongoing'),
+    "Completed": t('completed'),
+    "Procurement": t('procurement'),
+  }
+
   return (
     <Card className="hover:shadow-xl transition-shadow h-full">
       <CardHeader>
@@ -17,12 +26,12 @@ function ProjectCard({ project }: { project: Project }) {
                 "bg-yellow-100 text-yellow-800 border-yellow-300": project.status === "Procurement",
               })}
             >
-              {project.status}
+              {statusTranslations[project.status]}
             </Badge>
         </div>
         <CardDescription>
-            {project.startDate && `Started: ${project.startDate}`}
-            {project.status === 'Completed' && project.endDate && ` | Completed: ${project.endDate}`}
+            {project.startDate && `${t('started')}: ${project.startDate}`}
+            {project.status === 'Completed' && project.endDate && ` | ${t('completed')}: ${project.endDate}`}
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -32,46 +41,49 @@ function ProjectCard({ project }: { project: Project }) {
   )
 }
 
-function ProjectList({ projects }: { projects: Project[] }) {
+function ProjectList({ projects, t }: { projects: Project[], t: Function }) {
     if (projects.length === 0) {
-        return <p className="text-muted-foreground mt-8 text-center">No projects in this category.</p>;
+        return <p className="text-muted-foreground mt-8 text-center">{t('noProjectsInCategory')}</p>;
     }
 
     return (
         <div className="grid md:grid-cols-2 gap-8 mt-8">
-            {projects.map(project => <ProjectCard key={project.id} project={project} />)}
+            {projects.map(project => <ProjectCard key={project.id} project={project} t={t} />)}
         </div>
     )
 }
 
 export default function ProjectsPage() {
-  const ongoingProjects = projectData.filter(p => p.status === "Ongoing");
-  const completedProjects = projectData.filter(p => p.status === "Completed");
-  const procurementProjects = projectData.filter(p => p.status === "Procurement");
+  const { t, language } = useLanguage()
+  const currentProjectData = projectData[language]
+
+  const ongoingProjects = currentProjectData.filter(p => p.status === "Ongoing");
+  const completedProjects = currentProjectData.filter(p => p.status === "Completed");
+  const procurementProjects = currentProjectData.filter(p => p.status === "Procurement");
 
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">Projects & Plans</h1>
+        <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">{t('projectsAndPlans')}</h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-          Explore our current initiatives, completed work, and procurement opportunities.
+          {t('projectsSubtitle')}
         </p>
       </div>
 
       <Tabs defaultValue="ongoing" className="w-full">
         <TabsList className="grid w-full grid-cols-3 mx-auto max-w-lg">
-          <TabsTrigger value="ongoing">Ongoing</TabsTrigger>
-          <TabsTrigger value="completed">Completed</TabsTrigger>
-          <TabsTrigger value="procurement">Procurement</TabsTrigger>
+          <TabsTrigger value="ongoing">{t('ongoing')}</TabsTrigger>
+          <TabsTrigger value="completed">{t('completed')}</TabsTrigger>
+          <TabsTrigger value="procurement">{t('procurement')}</TabsTrigger>
         </TabsList>
         <TabsContent value="ongoing">
-          <ProjectList projects={ongoingProjects} />
+          <ProjectList projects={ongoingProjects} t={t} />
         </TabsContent>
         <TabsContent value="completed">
-          <ProjectList projects={completedProjects} />
+          <ProjectList projects={completedProjects} t={t} />
         </TabsContent>
         <TabsContent value="procurement">
-          <ProjectList projects={procurementProjects} />
+          <ProjectList projects={procurementProjects} t={t} />
         </TabsContent>
       </Tabs>
     </div>
