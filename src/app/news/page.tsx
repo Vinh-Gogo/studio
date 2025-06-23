@@ -91,7 +91,7 @@ export default function NewsPage() {
       </div>
 
       <Tabs defaultValue={defaultTab} className="w-full">
-        <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 gap-1 mx-auto max-w-2xl">
+        <TabsList className="grid w-full grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4">
           <TabsTrigger value="all">{t('allNews')}</TabsTrigger>
           <TabsTrigger value="updates">{t('activityUpdates')}</TabsTrigger>
           <TabsTrigger value="quotations">{t('priceQuotations')}</TabsTrigger>
