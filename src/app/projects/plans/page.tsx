@@ -53,7 +53,7 @@ function ProjectList({ projects, t }: { projects: Project[], t: Function }) {
     )
 }
 
-export default function ProjectPlansPage() {
+export default function ProcurementListPage() {
   const { t, language } = useLanguage()
   const currentProjectData = projectData[language]
 
@@ -72,12 +72,12 @@ export default function ProjectPlansPage() {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                    <BreadcrumbPage>{t('projectPlans')}</BreadcrumbPage>
+                    <BreadcrumbPage>{t('procurementList')}</BreadcrumbPage>
                 </BreadcrumbItem>
             </BreadcrumbList>
         </Breadcrumb>
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">{t('projectPlans')}</h1>
+        <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">{t('procurementList')}</h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
           {t('projectsSubtitle')}
         </p>

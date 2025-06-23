@@ -18,8 +18,9 @@ export const translations = {
     historyAndAchievements: 'History & Achievements',
     departmentLeadership: 'Leadership',
     organizationalStructure: 'Organizational Structure',
-    projectInformation: 'Project Information',
-    projectPlans: 'Planning Notices',
+    ongoingProjects: 'Ongoing Projects',
+    completedProjects: 'Completed Projects',
+    procurementList: 'Equipment Procurement List',
 
     // Footer
     footerSlogan: 'Providing transparent and efficient public services.',
@@ -148,8 +149,9 @@ export const translations = {
     historyAndAchievements: 'Lịch sử hình thành & Thành tích',
     departmentLeadership: 'Lãnh đạo phòng',
     organizationalStructure: 'Cơ cấu tổ chức',
-    projectInformation: 'Thông tin dự án',
-    projectPlans: 'Kế hoạch dự án',
+    ongoingProjects: 'Dự án đang triển khai',
+    completedProjects: 'Dự án đã hoàn thành',
+    procurementList: 'Danh mục mua sắm thiết bị',
 
     // Footer
     footerSlogan: 'Cung cấp các dịch vụ công minh bạch và hiệu quả.',

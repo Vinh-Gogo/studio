@@ -91,7 +91,7 @@ export function Header() {
         { href: "/department/history-achievements", label: t('historyAndAchievements') },
       ]
     },
-    { href: "/personnel", label: t('personnel'), key: 'personnel' },
+    { href: "/personnel/leadership", label: t('personnel'), key: 'personnel' },
     { 
       key: 'news',
       label: t('news'),
@@ -105,8 +105,9 @@ export function Header() {
       key: 'projects',
       label: t('projects'),
       subLinks: [
-        { href: "/projects", label: t('projectInformation') },
-        { href: "/projects/plans", label: t('projectPlans') },
+        { href: "/projects", label: t('ongoingProjects') },
+        { href: "/projects/completed", label: t('completedProjects') },
+        { href: "/projects/plans", label: t('procurementList') },
       ]
     },
     { href: "/documents", label: t('documents'), key: 'documents' },

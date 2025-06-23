@@ -53,11 +53,11 @@ function ProjectList({ projects, t }: { projects: Project[], t: Function }) {
     )
 }
 
-export default function OngoingProjectsPage() {
+export default function CompletedProjectsPage() {
   const { t, language } = useLanguage()
   const currentProjectData = projectData[language]
 
-  const ongoingProjects = currentProjectData.filter(p => p.status === "Ongoing");
+  const completedProjects = currentProjectData.filter(p => p.status === "Completed");
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -68,18 +68,22 @@ export default function OngoingProjectsPage() {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                    <BreadcrumbPage>{t('ongoingProjects')}</BreadcrumbPage>
+                    <BreadcrumbLink href="/projects">{t('projects')}</BreadcrumbLink>
+                </BreadcrumbItem>
+                <BreadcrumbSeparator />
+                <BreadcrumbItem>
+                    <BreadcrumbPage>{t('completedProjects')}</BreadcrumbPage>
                 </BreadcrumbItem>
             </BreadcrumbList>
         </Breadcrumb>
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">{t('ongoingProjects')}</h1>
+        <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">{t('completedProjects')}</h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
           {t('projectsSubtitle')}
         </p>
       </div>
 
-      <ProjectList projects={ongoingProjects} t={t} />
+      <ProjectList projects={completedProjects} t={t} />
     </div>
   )
 }
