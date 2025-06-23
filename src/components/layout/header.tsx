@@ -3,7 +3,7 @@
 
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
-import { Menu, Search, X, ChevronDown, Monitor, Mail, Library } from "lucide-react"
+import { Menu, Search, X, ChevronDown, Mail, Library } from "lucide-react"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -30,6 +30,8 @@ function SearchBar({ variant = "default" }: { variant?: "default" | "topbar" }) 
         const query = formData.get('query') as string;
         if (query.trim()) {
             router.push(`/search?q=${encodeURIComponent(query)}`);
+            const activeSheetClose = document.getElementById('mobile-sheet-close');
+            if (activeSheetClose) activeSheetClose.click();
         }
     };
 
@@ -84,7 +86,14 @@ export function Header() {
         { href: "/department/history-achievements", label: t('historyAndAchievements') },
       ]
     },
-    { href: "/personnel/leadership", label: t('personnel'), key: 'personnel' },
+    {
+      key: 'personnel',
+      label: t('personnel'),
+      subLinks: [
+        { href: "/personnel/leadership", label: t('departmentLeadership') },
+        { href: "/personnel/structure", label: t('organizationalStructure') },
+      ]
+    },
     { 
       key: 'news',
       label: t('news'),
@@ -127,7 +136,7 @@ export function Header() {
                     {link.label} <ChevronDown className="ml-auto h-4 w-4" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="start">
+                <DropdownMenuContent align="start" className="w-[--radix-dropdown-menu-trigger-width]">
                   {link.subLinks.map(subLink => (
                     <DropdownMenuItem key={subLink.href} asChild>
                       <Link href={subLink.href} onClick={() => setSheetOpen(false)}>{subLink.label}</Link>
@@ -149,64 +158,66 @@ export function Header() {
   const DesktopNav = () => (
     <nav className="hidden md:flex items-center gap-1">
       {navLinks.map((link) => {
-          if (link.subLinks) {
-              const handleMouseEnter = () => {
-                  if (menuTimeout.current) {
-                      clearTimeout(menuTimeout.current)
-                  }
-                  setOpenMenuKey(link.key)
-              }
+        if (link.subLinks) {
+          const handleMouseEnter = () => {
+            if (menuTimeout.current) {
+              clearTimeout(menuTimeout.current);
+            }
+            setOpenMenuKey(link.key);
+          };
 
-              const handleMouseLeave = () => {
-                  menuTimeout.current = setTimeout(() => {
-                      setOpenMenuKey(null)
-                  }, 200)
-              }
-              
-              const isParentActive = pathname.startsWith(`/${link.key}`);
+          const handleMouseLeave = () => {
+            menuTimeout.current = setTimeout(() => {
+              setOpenMenuKey(null);
+            }, 200);
+          };
 
-              return (
-                  <DropdownMenu
-                      key={link.key}
-                      open={openMenuKey === link.key}
-                      onOpenChange={(isOpen) => setOpenMenuKey(isOpen ? link.key : null)}
-                  >
-                      <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                        <DropdownMenuTrigger asChild>
-                            <Button
-                                variant="ghost"
-                                className={cn(
-                                    "flex items-center uppercase font-semibold",
-                                    isParentActive ? "bg-accent text-accent-foreground" : ""
-                                )}
-                            >
-                                {link.label} <ChevronDown className="ml-1 h-4 w-4" />
-                            </Button>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent
-                            align="center"
-                            className="rounded-none"
-                        >
-                            {link.subLinks.map((subLink) => (
-                                <DropdownMenuItem key={subLink.href} asChild>
-                                    <Link href={subLink.href}>{subLink.label}</Link>
-                                </DropdownMenuItem>
-                            ))}
-                        </DropdownMenuContent>
-                      </div>
-                  </DropdownMenu>
-              )
-          }
+          const isParentActive = pathname.startsWith(`/${link.key}`);
+
           return (
-              <Button
-                  key={link.key}
-                  asChild
-                  variant={pathname === link.href ? "secondary" : "ghost"}
-                  className="uppercase font-semibold"
+            <DropdownMenu
+              key={link.key}
+              open={openMenuKey === link.key}
+              onOpenChange={(isOpen) => setOpenMenuKey(isOpen ? link.key : null)}
+            >
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="ghost"
+                  className={cn(
+                    "flex items-center uppercase font-semibold",
+                    isParentActive ? "bg-accent text-accent-foreground" : ""
+                  )}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  {link.label} <ChevronDown className="ml-1 h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent
+                align="center"
+                className="rounded-none"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
               >
-                  <Link href={link.href!}>{link.label}</Link>
-              </Button>
-          )
+                {link.subLinks.map((subLink) => (
+                  <DropdownMenuItem key={subLink.href} asChild>
+                    <Link href={subLink.href}>{subLink.label}</Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          );
+        }
+        return (
+          <Button
+            key={link.key}
+            asChild
+            variant={pathname === link.href ? "secondary" : "ghost"}
+            className="uppercase font-semibold"
+          >
+            <Link href={link.href!}>{link.label}</Link>
+          </Button>
+        );
       })}
     </nav>
   );
@@ -255,14 +266,16 @@ export function Header() {
                             <Link href="/" className="flex items-center" onClick={() => setSheetOpen(false)}>
                                 <SiteLogo />
                             </Link>
-                            <Button variant="ghost" size="icon" onClick={() => setSheetOpen(false)}>
+                            <Button variant="ghost" size="icon" id="mobile-sheet-close" onClick={() => setSheetOpen(false)}>
                                 <X className="h-6 w-6"/>
                             </Button>
                         </div>
                         <div className="mb-4">
                             <SearchBar />
                         </div>
-                        <MobileNav />
+                        <div className="overflow-y-auto">
+                            <MobileNav />
+                        </div>
                     </SheetContent>
                 </Sheet>
                 ) : (
