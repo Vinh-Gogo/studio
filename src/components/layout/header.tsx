@@ -86,14 +86,7 @@ export function Header() {
         { href: "/department/history-achievements", label: t('historyAndAchievements') },
       ]
     },
-    {
-      key: 'personnel',
-      label: t('personnel'),
-      subLinks: [
-        { href: "/personnel/leadership", label: t('departmentLeadership') },
-        { href: "/personnel/structure", label: t('organizationalStructure') },
-      ]
-    },
+    { href: "/personnel", label: t('personnel'), key: 'personnel' },
     { 
       key: 'news',
       label: t('news'),
@@ -178,7 +171,13 @@ export function Header() {
             <DropdownMenu
               key={link.key}
               open={openMenuKey === link.key}
-              onOpenChange={(isOpen) => setOpenMenuKey(isOpen ? link.key : null)}
+              onOpenChange={(isOpen) => {
+                if (!isOpen) {
+                    setOpenMenuKey(null)
+                } else {
+                    setOpenMenuKey(link.key)
+                }
+              }}
             >
               <DropdownMenuTrigger asChild>
                 <Button
@@ -189,6 +188,7 @@ export function Header() {
                   )}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
+                  onClick={() => setOpenMenuKey(openMenuKey === link.key ? null : link.key)}
                 >
                   {link.label} <ChevronDown className="ml-1 h-4 w-4" />
                 </Button>
@@ -214,6 +214,7 @@ export function Header() {
             asChild
             variant={pathname === link.href ? "secondary" : "ghost"}
             className="uppercase font-semibold"
+            onMouseEnter={() => setOpenMenuKey(null)}
           >
             <Link href={link.href!}>{link.label}</Link>
           </Button>

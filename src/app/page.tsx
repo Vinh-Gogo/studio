@@ -172,7 +172,7 @@ export default function Home() {
               </div>
               <div className="flex justify-end">
                 <Button asChild variant="outline" size="icon" className="rounded-full">
-                  <Link href="/personnel/leadership"><ArrowRight className="h-4 w-4" /></Link>
+                  <Link href="/personnel"><ArrowRight className="h-4 w-4" /></Link>
                 </Button>
               </div>
             </div>
