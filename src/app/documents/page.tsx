@@ -32,19 +32,23 @@ export default function DocumentsPage() {
   const [typeFilter, setTypeFilter] = React.useState("all")
   const [agencyFilter, setAgencyFilter] = React.useState("all")
   const [yearFilter, setYearFilter] = React.useState("all")
+  const [formatFilter, setFormatFilter] = React.useState("all")
 
   const filteredDocuments = currentDocumentData.filter(doc => {
     return (
       doc.name.toLowerCase().includes(search.toLowerCase()) &&
       (typeFilter === "all" || doc.type === typeFilter) &&
       (agencyFilter === "all" || doc.agency === agencyFilter) &&
-      (yearFilter === "all" || doc.year.toString() === yearFilter)
+      (yearFilter === "all" || doc.year.toString() === yearFilter) &&
+      (formatFilter === "all" || doc.format === formatFilter)
     )
   })
 
   const uniqueAgencies = [...new Set(currentDocumentData.map(doc => doc.agency))];
   const uniqueYears = [...new Set(currentDocumentData.map(doc => doc.year))].sort((a,b) => b-a);
   const uniqueTypes = [...new Set(currentDocumentData.map(doc => doc.type))];
+  const uniqueFormats = [...new Set(currentDocumentData.map(doc => doc.format))];
+
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -55,14 +59,13 @@ export default function DocumentsPage() {
         </p>
       </div>
 
-      <div className="bg-card p-4 sm:p-6 rounded-lg border mb-8">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <Input
+      <div className="bg-muted p-4 sm:p-6 rounded-lg border mb-8 space-y-4">
+         <Input
             placeholder={t('searchDocuments')}
             value={search}
             onChange={e => setSearch(e.target.value)}
-            className="lg:col-span-2"
           />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           <Select value={typeFilter} onValueChange={setTypeFilter}>
             <SelectTrigger><SelectValue placeholder={t('filterByType')} /></SelectTrigger>
             <SelectContent>
@@ -84,6 +87,13 @@ export default function DocumentsPage() {
               {uniqueYears.map(year => <SelectItem key={year} value={year.toString()}>{year}</SelectItem>)}
             </SelectContent>
           </Select>
+           <Select value={formatFilter} onValueChange={setFormatFilter}>
+            <SelectTrigger><SelectValue placeholder={t('filterByFormat')} /></SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">{t('allFormats')}</SelectItem>
+              {uniqueFormats.map(format => <SelectItem key={format} value={format}>{format}</SelectItem>)}
+            </SelectContent>
+          </Select>
         </div>
       </div>
 
@@ -95,6 +105,7 @@ export default function DocumentsPage() {
               <TableHead>{t('type')}</TableHead>
               <TableHead>{t('agency')}</TableHead>
               <TableHead>{t('year')}</TableHead>
+              <TableHead>{t('format')}</TableHead>
               <TableHead className="text-right">{t('download')}</TableHead>
             </TableRow>
           </TableHeader>
@@ -109,6 +120,7 @@ export default function DocumentsPage() {
                     <TableCell>{doc.type}</TableCell>
                     <TableCell>{doc.agency}</TableCell>
                     <TableCell>{doc.year}</TableCell>
+                    <TableCell>{doc.format}</TableCell>
                     <TableCell className="text-right">
                     <Button asChild variant="ghost" size="icon">
                         <a href={doc.fileUrl} download><Download className="h-5 w-5" /></a>
@@ -118,7 +130,7 @@ export default function DocumentsPage() {
                 ))
             ) : (
                 <TableRow>
-                    <TableCell colSpan={5} className="h-24 text-center">
+                    <TableCell colSpan={6} className="h-24 text-center">
                         {t('noDocumentsFound')}
                     </TableCell>
                 </TableRow>

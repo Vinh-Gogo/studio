@@ -97,8 +97,11 @@ export const translations = {
     type: 'Type',
     agency: 'Agency',
     year: 'Year',
+    format: 'Format',
     download: 'Download',
     noDocumentsFound: 'No documents found.',
+    filterByFormat: 'Filter by Format',
+    allFormats: 'All Formats',
 
     // Search Page
     smartSearch: 'Smart Search',
@@ -223,8 +226,11 @@ export const translations = {
     type: 'Loại',
     agency: 'Cơ quan',
     year: 'Năm',
+    format: 'Định dạng',
     download: 'Tải xuống',
     noDocumentsFound: 'Không tìm thấy tài liệu.',
+    filterByFormat: 'Lọc theo định dạng',
+    allFormats: 'Tất cả định dạng',
 
     // Search Page
     smartSearch: 'Tìm kiếm thông minh',
