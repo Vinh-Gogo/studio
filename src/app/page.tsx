@@ -22,10 +22,6 @@ export default function Home() {
   const currentNewsData = newsData[language]
   const latestNews = currentNewsData.slice(0, 5);
 
-  const plugin = React.useRef(
-    Autoplay({ delay: 3000, stopOnInteraction: false })
-  )
-
   const bannerImages = [
     { src: "https://placehold.co/1800x800.png", hint: "university campus modern" },
     { src: "https://placehold.co/1800x800.png", hint: "students studying library" },
@@ -37,10 +33,8 @@ export default function Home() {
       {/* Banner Section */}
       <section className="relative h-[60vh] w-full text-white">
         <Carousel
-          plugins={[plugin.current]}
+          plugins={[Autoplay({ delay: 3000, stopOnInteraction: true })]}
           className="w-full h-full"
-          onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.reset}
           opts={{
             loop: true,
           }}
