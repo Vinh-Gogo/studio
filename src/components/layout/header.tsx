@@ -3,7 +3,7 @@
 
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
-import { Menu, Search, X, ChevronDown } from "lucide-react"
+import { Menu, Search, X, ChevronDown, Landmark } from "lucide-react"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -18,7 +18,6 @@ import { cn } from "@/lib/utils"
 import React from "react"
 import { useLanguage } from "@/contexts/language-context"
 import { LanguageSwitcher } from "../language-switcher"
-import { IuhLogo } from "@/components/ui/iuh-logo"
 
 function SearchBar({ variant = "default" }: { variant?: "default" | "topbar" }) {
     const router = useRouter();
@@ -55,6 +54,20 @@ function SearchBar({ variant = "default" }: { variant?: "default" | "topbar" }) 
     );
 }
 
+const SiteLogo = () => {
+    const { t } = useLanguage()
+    return (
+        <div className="flex items-center gap-2">
+            <Landmark className="h-10 w-10 text-primary" />
+            <div className="flex flex-col justify-center">
+                <span className="font-bold text-sm leading-tight whitespace-nowrap text-primary">
+                {t('portalName')}
+                </span>
+            </div>
+        </div>
+    )
+}
+
 export function Header() {
   const isMobile = useIsMobile()
   const pathname = usePathname()
@@ -78,14 +91,7 @@ export function Header() {
         { href: "/department/history-achievements", label: t('historyAndAchievements') },
       ]
     },
-    { 
-      key: 'personnel',
-      label: t('personnel'),
-      subLinks: [
-        { href: "/personnel/leadership", label: t('departmentLeadership') },
-        { href: "/personnel/structure", label: t('organizationalStructure') },
-      ]
-    },
+    { href: "/personnel", label: t('personnel'), key: 'personnel' },
     { 
       key: 'news',
       label: t('news'),
@@ -136,10 +142,9 @@ export function Header() {
           )
         }
         return (
-          <Button key={link.key} asChild variant="ghost" className={cn(
+          <Button key={link.key} asChild variant={pathname === link.href ? "secondary" : "ghost"} className={cn(
              "uppercase font-semibold",
-             isMobileNav ? "w-full justify-start text-lg py-4" : "",
-             pathname === link.href ? "bg-accent text-accent-foreground" : ""
+             isMobileNav ? "w-full justify-start text-lg py-4" : ""
           )}>
             <Link href={link.href!} onClick={() => setSheetOpen(false)}>{link.label}</Link>
           </Button>
@@ -167,7 +172,7 @@ export function Header() {
         <div className="border-b bg-card">
             <div className="container mx-auto flex h-20 items-center justify-between px-4">
                 <Link href="/" className="flex items-center">
-                    <IuhLogo />
+                    <SiteLogo />
                 </Link>
                 
                 {isClient && isMobile ? (
@@ -180,7 +185,7 @@ export function Header() {
                     <SheetContent side="right" className="w-full max-w-xs p-4 flex flex-col">
                         <div className="flex justify-between items-center mb-6">
                             <Link href="/" className="flex items-center" onClick={() => setSheetOpen(false)}>
-                                <IuhLogo />
+                                <SiteLogo />
                             </Link>
                             <Button variant="ghost" size="icon" onClick={() => setSheetOpen(false)}>
                                 <X className="h-6 w-6"/>
