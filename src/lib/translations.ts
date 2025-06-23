@@ -135,6 +135,12 @@ export const translations = {
     decisionsAndRegulations: 'Decisions & Regulations',
     administrativeForms: 'Administrative Forms',
     reportsAndStatistics: 'Reports & Statistics',
+
+    // Top bar
+    eOffice: 'E-OFFICE',
+    email: 'EMAIL',
+    libraryInfo: 'LIBRARY - INFORMATION',
+    connectContact: 'CONNECT | CONTACT',
   },
   vi: {
     // Header
@@ -271,6 +277,12 @@ export const translations = {
     decisionsAndRegulations: 'Quyết định – Quy chế',
     administrativeForms: 'Biểu mẫu hành chính',
     reportsAndStatistics: 'Báo cáo – Thống kê',
+
+    // Top bar
+    eOffice: 'E-OFFICE',
+    email: 'EMAIL',
+    libraryInfo: 'THƯ VIỆN - THÔNG TIN',
+    connectContact: 'KẾT NỐI | LIÊN HỆ',
   },
 };
 

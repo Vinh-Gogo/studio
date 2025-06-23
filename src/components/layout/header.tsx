@@ -3,7 +3,7 @@
 
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
-import { Menu, Search, X, ChevronDown, Landmark } from "lucide-react"
+import { Menu, Search, X, ChevronDown, Landmark, Monitor, Mail, Library } from "lucide-react"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -164,16 +164,29 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full shadow-sm">
-        {/* Top blue bar */}
-        <div className="bg-primary text-primary-foreground">
-            <div className="container mx-auto flex h-12 items-center justify-end px-4 gap-4">
-                <div className="hidden md:block">
-                    <SearchBar variant="topbar" />
+        {/* Top bar */}
+        <div className="bg-accent text-accent-foreground">
+            <div className="container mx-auto flex h-12 items-center justify-between px-4">
+                <div className="hidden md:flex items-center gap-6 text-sm">
+                    <Link href="#" className="flex items-center gap-2 hover:underline">
+                        <Monitor className="h-4 w-4" />
+                        <span>{t('eOffice')}</span>
+                    </Link>
+                    <Link href="#" className="flex items-center gap-2 hover:underline">
+                        <Mail className="h-4 w-4" />
+                        <span>{t('email')}</span>
+                    </Link>
+                    <Link href="#" className="flex items-center gap-2 hover:underline">
+                        <Library className="h-4 w-4" />
+                        <span>{t('libraryInfo')}</span>
+                    </Link>
                 </div>
-                <Button variant="outline" className="border-primary-foreground/50 text-primary-foreground bg-transparent hover:bg-primary-foreground/10 hover:text-white">
-                    Đăng nhập
-                </Button>
-                <LanguageSwitcher />
+                <div className="flex items-center gap-6 text-sm">
+                    <Link href="/contact" className="hidden md:block hover:underline">
+                        <span>{t('connectContact')}</span>
+                    </Link>
+                    <LanguageSwitcher />
+                </div>
             </div>
         </div>
         
