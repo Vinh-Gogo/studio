@@ -1,3 +1,4 @@
+
 "use client"
 
 import Link from "next/link"
@@ -64,6 +65,8 @@ export function Header() {
   const [isSheetOpen, setSheetOpen] = React.useState(false);
   const { t } = useLanguage();
   const [isClient, setIsClient] = React.useState(false)
+  const [openMenuKey, setOpenMenuKey] = React.useState<string | null>(null)
+  const menuTimeout = React.useRef<NodeJS.Timeout | null>(null)
 
   React.useEffect(() => {
     setIsClient(true)
@@ -112,52 +115,109 @@ export function Header() {
     { href: "/faq", label: t('faq'), key: 'faq' },
     { href: "/contact", label: t('contact'), key: 'contact' },
   ]
-
-  const NavContent = () => (
-    <>
-      {navLinks.map((link) => {
-        const isMobileNav = isClient && isMobile;
-        if (link.subLinks) {
-          const isParentActive = pathname.startsWith(`/${link.key}`);
+  
+  const MobileNav = () => (
+      <nav className="flex flex-col gap-2 mb-6">
+        {navLinks.map((link) => {
+          if (link.subLinks) {
+            return (
+              <DropdownMenu key={link.key}>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" className="w-full justify-start text-lg py-4 uppercase font-semibold">
+                    {link.label} <ChevronDown className="ml-auto h-4 w-4" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start">
+                  {link.subLinks.map(subLink => (
+                    <DropdownMenuItem key={subLink.href} asChild>
+                      <Link href={subLink.href} onClick={() => setSheetOpen(false)}>{subLink.label}</Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            )
+          }
           return (
-            <DropdownMenu key={link.key}>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className={cn(
-                  "flex items-center uppercase font-semibold",
-                  isMobileNav ? "w-full justify-start text-lg py-4" : "",
-                  isParentActive ? "bg-accent text-accent-foreground" : ""
-                )}>
-                  {link.label} <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align={isMobileNav ? "start" : "center"}>
-                {link.subLinks.map(subLink => (
-                  <DropdownMenuItem key={subLink.href} asChild>
-                    <Link href={subLink.href} onClick={() => setSheetOpen(false)}>{subLink.label}</Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <Button key={link.key} asChild variant={pathname === link.href ? "secondary" : "ghost"} className="w-full justify-start text-lg py-4 uppercase font-semibold">
+              <Link href={link.href!} onClick={() => setSheetOpen(false)}>{link.label}</Link>
+            </Button>
           )
-        }
-        return (
-          <Button key={link.key} asChild variant={pathname === link.href ? "secondary" : "ghost"} className={cn(
-             "uppercase font-semibold",
-             isMobileNav ? "w-full justify-start text-lg py-4" : ""
-          )}>
-            <Link href={link.href!} onClick={() => setSheetOpen(false)}>{link.label}</Link>
-          </Button>
-        )
-      })}
-    </>
+        })}
+      </nav>
   );
+
+  const DesktopNav = () => (
+    <nav className="hidden md:flex items-center gap-1">
+      {navLinks.map((link) => {
+          if (link.subLinks) {
+              const handleMouseEnter = () => {
+                  if (menuTimeout.current) {
+                      clearTimeout(menuTimeout.current)
+                  }
+                  setOpenMenuKey(link.key)
+              }
+
+              const handleMouseLeave = () => {
+                  menuTimeout.current = setTimeout(() => {
+                      setOpenMenuKey(null)
+                  }, 200)
+              }
+              
+              const isParentActive = pathname.startsWith(`/${link.key}`);
+
+              return (
+                  <DropdownMenu
+                      key={link.key}
+                      open={openMenuKey === link.key}
+                      onOpenChange={(isOpen) => setOpenMenuKey(isOpen ? link.key : null)}
+                  >
+                      <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                        <DropdownMenuTrigger asChild>
+                            <Button
+                                variant="ghost"
+                                className={cn(
+                                    "flex items-center uppercase font-semibold",
+                                    isParentActive ? "bg-accent text-accent-foreground" : ""
+                                )}
+                            >
+                                {link.label} <ChevronDown className="ml-1 h-4 w-4" />
+                            </Button>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent
+                            align="center"
+                            className="rounded-none"
+                        >
+                            {link.subLinks.map((subLink) => (
+                                <DropdownMenuItem key={subLink.href} asChild>
+                                    <Link href={subLink.href}>{subLink.label}</Link>
+                                </DropdownMenuItem>
+                            ))}
+                        </DropdownMenuContent>
+                      </div>
+                  </DropdownMenu>
+              )
+          }
+          return (
+              <Button
+                  key={link.key}
+                  asChild
+                  variant={pathname === link.href ? "secondary" : "ghost"}
+                  className="uppercase font-semibold"
+              >
+                  <Link href={link.href!}>{link.label}</Link>
+              </Button>
+          )
+      })}
+    </nav>
+  );
+
 
   return (
     <header className="sticky top-0 z-50 w-full shadow-sm">
         {/* Top bar */}
         <div className="bg-accent text-accent-foreground">
             <div className="container mx-auto flex h-12 items-center justify-between px-4">
-                <div className="hidden md:flex items-center gap-6 text-sm">
+                <div className="flex items-center gap-6 text-sm">
                     <Link href="#" className="flex items-center gap-2 hover:underline">
                         <Monitor className="h-4 w-4" />
                         <span>{t('eOffice')}</span>
@@ -206,15 +266,11 @@ export function Header() {
                         <div className="mb-4">
                             <SearchBar />
                         </div>
-                        <nav className="flex flex-col gap-2 mb-6">
-                            <NavContent />
-                        </nav>
+                        <MobileNav />
                     </SheetContent>
                 </Sheet>
                 ) : (
-                <nav className="hidden md:flex items-center gap-1">
-                    <NavContent />
-                </nav>
+                  <DesktopNav />
                 )}
             </div>
       </div>
