@@ -20,7 +20,7 @@ import { useLanguage } from "@/contexts/language-context"
 import { LanguageSwitcher } from "../language-switcher"
 import { IuhLogo } from "@/components/ui/iuh-logo"
 
-function SearchBar() {
+function SearchBar({ variant = "default" }: { variant?: "default" | "topbar" }) {
     const router = useRouter();
     const { t } = useLanguage();
 
@@ -33,14 +33,22 @@ function SearchBar() {
         }
     };
 
+    const isTopBar = variant === "topbar";
+
     return (
         <form onSubmit={handleSearch} className="relative w-full max-w-sm">
             <Input
                 name="query"
                 placeholder={t('aiSearch')}
-                className="pr-10"
+                className={cn(
+                    "pr-10",
+                    isTopBar && "bg-white/20 text-white placeholder:text-white/70 border-white/50 focus:bg-white focus:text-card-foreground"
+                )}
             />
-            <Button type="submit" variant="ghost" size="icon" className="absolute top-0 right-0 h-full w-10">
+            <Button type="submit" variant="ghost" size="icon" className={cn(
+                "absolute top-0 right-0 h-full w-10",
+                isTopBar ? "text-white hover:bg-transparent" : ""
+            )}>
                 <Search className="h-4 w-4" />
             </Button>
         </form>
@@ -112,50 +120,57 @@ export function Header() {
   );
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-card shadow-sm">
-      <div className="container mx-auto flex h-20 items-center justify-between px-4">
-        <Link href="/" className="flex items-center">
-          <IuhLogo />
-        </Link>
-        
-        {isMobile ? (
-          <div className="flex items-center gap-2">
-            <LanguageSwitcher />
-            <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-full max-w-xs p-4 flex flex-col">
-                 <div className="flex justify-between items-center mb-6">
-                   <Link href="/" className="flex items-center" onClick={() => setSheetOpen(false)}>
-                      <IuhLogo />
-                  </Link>
-                  <Button variant="ghost" size="icon" onClick={() => setSheetOpen(false)}>
-                      <X className="h-6 w-6"/>
-                  </Button>
-                 </div>
-                <nav className="flex flex-col gap-2 mb-6">
-                  <NavContent />
-                </nav>
-                <div className="mt-auto">
-                  <SearchBar />
+    <header className="sticky top-0 z-50 w-full shadow-sm">
+        {/* Top blue bar */}
+        <div className="bg-primary text-primary-foreground">
+            <div className="container mx-auto flex h-12 items-center justify-end px-4 gap-4">
+                <div className="hidden md:block">
+                    <SearchBar variant="topbar" />
                 </div>
-              </SheetContent>
-            </Sheet>
-          </div>
-        ) : (
-          <>
-            <nav className="hidden md:flex items-center gap-1">
-              <NavContent />
-            </nav>
-            <div className="hidden md:flex items-center gap-4">
-              <SearchBar />
-              <LanguageSwitcher />
+                <Button variant="outline" className="border-primary-foreground/50 text-primary-foreground bg-transparent hover:bg-primary-foreground/10 hover:text-white">
+                    Đăng nhập
+                </Button>
+                <LanguageSwitcher />
             </div>
-          </>
-        )}
+        </div>
+        
+        {/* Main navigation bar */}
+        <div className="border-b bg-card">
+            <div className="container mx-auto flex h-20 items-center justify-between px-4">
+                <Link href="/" className="flex items-center">
+                    <IuhLogo />
+                </Link>
+                
+                {isMobile ? (
+                <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
+                    <SheetTrigger asChild>
+                        <Button variant="ghost" size="icon">
+                        <Menu className="h-6 w-6" />
+                        </Button>
+                    </SheetTrigger>
+                    <SheetContent side="right" className="w-full max-w-xs p-4 flex flex-col">
+                        <div className="flex justify-between items-center mb-6">
+                            <Link href="/" className="flex items-center" onClick={() => setSheetOpen(false)}>
+                                <IuhLogo />
+                            </Link>
+                            <Button variant="ghost" size="icon" onClick={() => setSheetOpen(false)}>
+                                <X className="h-6 w-6"/>
+                            </Button>
+                        </div>
+                        <div className="mb-4">
+                            <SearchBar />
+                        </div>
+                        <nav className="flex flex-col gap-2 mb-6">
+                            <NavContent />
+                        </nav>
+                    </SheetContent>
+                </Sheet>
+                ) : (
+                <nav className="hidden md:flex items-center gap-1">
+                    <NavContent />
+                </nav>
+                )}
+            </div>
       </div>
     </header>
   )
