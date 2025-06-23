@@ -14,36 +14,70 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { newsData } from "@/lib/data"
 import { useLanguage } from "@/contexts/language-context"
+import * as React from "react"
+import Autoplay from "embla-carousel-autoplay"
 
 export default function Home() {
   const { t, language } = useLanguage()
   const currentNewsData = newsData[language]
   const latestNews = currentNewsData.slice(0, 5);
 
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: false })
+  )
+
+  const bannerImages = [
+    { src: "https://placehold.co/1800x800.png", hint: "university campus modern" },
+    { src: "https://placehold.co/1800x800.png", hint: "students studying library" },
+    { src: "https://placehold.co/1800x800.png", hint: "university building sunny" },
+  ]
+
   return (
     <div className="flex flex-col">
       {/* Banner Section */}
-      <section className="relative h-[60vh] w-full bg-blue-900 text-white flex items-center justify-center">
-        <Image
-          src="https://placehold.co/1800x800.png"
-          alt="Department building"
-          layout="fill"
-          objectFit="cover"
-          className="opacity-20"
-          data-ai-hint="government building modern"
-        />
-        <div className="relative z-10 text-center p-4">
-          <h1 className="text-4xl md:text-6xl font-headline font-bold drop-shadow-md">
-            {t('bannerTitle')}
-          </h1>
-          <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto drop-shadow-sm">
-            {t('bannerSubtitle')}
-          </p>
-          <Button asChild className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
-            <Link href="/department">
-              {t('learnMore')} <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
+      <section className="relative h-[60vh] w-full text-white">
+        <Carousel
+          plugins={[plugin.current]}
+          className="w-full h-full"
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
+          opts={{
+            loop: true,
+          }}
+        >
+          <CarouselContent className="h-full -ml-0">
+            {bannerImages.map((image, index) => (
+              <CarouselItem key={index} className="h-full p-0 relative">
+                <Image
+                  src={image.src}
+                  alt={`Banner image ${index + 1}`}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                  className="w-full h-full"
+                  data-ai-hint={image.hint}
+                  priority={index === 0}
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-red-600/50"></div>
+        
+        <div className="absolute inset-0 z-10 flex items-center justify-center">
+          <div className="text-center p-4">
+            <h1 className="text-4xl md:text-6xl font-headline font-bold drop-shadow-md">
+              {t('bannerTitle')}
+            </h1>
+            <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto drop-shadow-sm">
+              {t('bannerSubtitle')}
+            </p>
+            <Button asChild className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
+              <Link href="/department">
+                {t('learnMore')} <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
