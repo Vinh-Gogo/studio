@@ -24,18 +24,19 @@ export function Footer() {
           <div>
             <h3 className="font-semibold mb-4 font-headline">{t('quickLinks')}</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/news" className="hover:text-primary hover:underline">{t('newsAndAnnouncements')}</Link></li>
-              <li><Link href="/documents" className="hover:text-primary hover:underline">{t('documentLibrary')}</Link></li>
-              <li><Link href="/projects" className="hover:text-primary hover:underline">{t('projectsAndPlans')}</Link></li>
+              <li><Link href="/news" className="hover:text-primary hover:underline">{t('news')}</Link></li>
+              <li><Link href="/documents" className="hover:text-primary hover:underline">{t('documents')}</Link></li>
+              <li><Link href="/projects" className="hover:text-primary hover:underline">{t('projects')}</Link></li>
               <li><Link href="/department" className="hover:text-primary hover:underline">{t('aboutUs')}</Link></li>
+              <li><Link href="/contact" className="hover:text-primary hover:underline">{t('contact')}</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold mb-4 font-headline">{t('contactUs')}</h3>
             <address className="not-italic text-sm space-y-2 text-muted-foreground">
-              <p>{t('address')}</p>
+              <p>12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, Thành phố Hồ Chí Minh</p>
               <p>{t('contactUs')}: <a href="mailto:contact@phongkhdt.iuh.edu.vn" className="hover:text-primary hover:underline">contact@phongkhdt.iuh.edu.vn</a></p>
-              <p>Phone: (123) 456-7890</p>
+              <p>Phone: (028) 3894 0390</p>
             </address>
           </div>
         </div>

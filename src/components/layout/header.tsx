@@ -68,6 +68,8 @@ export function Header() {
     { href: "/news", label: t('news'), key: 'news' },
     { href: "/projects", label: t('projects'), key: 'projects' },
     { href: "/documents", label: t('documents'), key: 'documents' },
+    { href: "/faq", label: t('faq'), key: 'faq' },
+    { href: "/contact", label: t('contact'), key: 'contact' },
   ]
 
   const NavContent = () => (

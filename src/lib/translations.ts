@@ -4,10 +4,12 @@ export const translations = {
     // Header
     home: 'Home',
     department: 'About Us',
-    personnel: 'Personnel',
-    news: 'News',
-    projects: 'Projects',
-    documents: 'Documents',
+    personnel: 'Organization',
+    news: 'News & Notices',
+    projects: 'Projects & Plans',
+    documents: 'Documents & Forms',
+    faq: 'FAQ',
+    contact: 'Contact',
     aiSearch: 'AI Search...',
     portalName: 'PLANNING - INVESTMENT DEPARTMENT',
     portalShortName: 'PLANNING-INVESTMENT',
@@ -23,7 +25,7 @@ export const translations = {
     projectsAndPlans: 'Projects & Plans',
     aboutUs: 'About Us',
     contactUs: 'Contact Us',
-    address: '123 Government Ave, Capital City, Vietnam',
+    address: '12 Nguyen Van Bao, Ward 4, Go Vap, Ho Chi Minh City',
     copyright: '© {year} PLANNING - INVESTMENT DEPARTMENT. All rights reserved.',
 
     // Home Page
@@ -103,15 +105,32 @@ export const translations = {
     // Metadata
     metaTitle: 'PLANNING - INVESTMENT DEPARTMENT',
     metaDescription: 'The official portal for PLANNING - INVESTMENT DEPARTMENT.',
+    
+    // Contact page
+    contactTitle: 'Contact Us',
+    contactSubtitle: 'We are here to help. Reach out to us through any of the following channels.',
+    contactForm: 'Contact Form',
+    fullName: 'Full Name',
+    emailAddress: 'Email Address',
+    subject: 'Subject',
+    message: 'Message',
+    sendMessage: 'Send Message',
+    contactInfo: 'Contact Information',
+
+    // FAQ Page
+    faqTitle: 'Frequently Asked Questions',
+    faqSubtitle: 'Find answers to common questions about our department and services.',
   },
   vi: {
     // Header
     home: 'Trang chủ',
     department: 'Giới thiệu',
-    personnel: 'Nhân sự',
-    news: 'Tin tức',
-    projects: 'Dự án',
-    documents: 'Văn bản',
+    personnel: 'Tổ chức nhân sự',
+    news: 'Tin tức – Thông báo',
+    projects: 'Dự án – Kế hoạch',
+    documents: 'Văn bản – Biểu mẫu',
+    faq: 'Hỏi – Đáp (FAQ)',
+    contact: 'Liên hệ',
     aiSearch: 'Tìm kiếm AI...',
     portalName: 'PHÒNG KẾ HOẠCH - ĐẦU TƯ',
     portalShortName: 'PHÒNG KH-ĐT',
@@ -127,7 +146,7 @@ export const translations = {
     projectsAndPlans: 'Dự án & Kế hoạch',
     aboutUs: 'Về chúng tôi',
     contactUs: 'Liên hệ',
-    address: '123 Đường Chính Phủ, Thủ đô, Việt Nam',
+    address: '12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, Thành phố Hồ Chí Minh',
     copyright: '© {year} PHÒNG KẾ HOẠCH - ĐẦU TƯ. Đã đăng ký bản quyền.',
 
     // Home Page
@@ -207,6 +226,21 @@ export const translations = {
     // Metadata
     metaTitle: 'PHÒNG KẾ HOẠCH - ĐẦU TƯ',
     metaDescription: 'Cổng thông tin chính thức của PHÒNG KẾ HOẠCH - ĐẦU TƯ.',
+    
+    // Contact page
+    contactTitle: 'Liên hệ',
+    contactSubtitle: 'Chúng tôi ở đây để giúp bạn. Hãy liên hệ với chúng tôi qua bất kỳ kênh nào sau đây.',
+    contactForm: 'Biểu mẫu liên hệ',
+    fullName: 'Họ và tên',
+    emailAddress: 'Địa chỉ email',
+    subject: 'Chủ đề',
+    message: 'Nội dung',
+    sendMessage: 'Gửi tin nhắn',
+    contactInfo: 'Thông tin liên hệ',
+
+    // FAQ Page
+    faqTitle: 'Các câu hỏi thường gặp',
+    faqSubtitle: 'Tìm câu trả lời cho các câu hỏi phổ biến về phòng ban và dịch vụ của chúng tôi.',
   },
 };
 
