@@ -3,11 +3,17 @@
 
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
-import { Landmark, Menu, Search, X } from "lucide-react"
+import { Landmark, Menu, Search, X, ChevronDown } from "lucide-react"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 import { cn } from "@/lib/utils"
 import React from "react"
 import { useLanguage } from "@/contexts/language-context"
@@ -48,7 +54,15 @@ export function Header() {
 
   const navLinks = [
     { href: "/", label: t('home') },
-    { href: "/department", label: t('department') },
+    { 
+      href: "/department", 
+      label: t('department'),
+      subLinks: [
+        { href: "/department#general-introduction", label: t('generalIntroduction') },
+        { href: "/department#functions-mission", label: t('functionsAndMission') },
+        { href: "/department#history-achievements", label: t('historyAndAchievements') },
+      ]
+    },
     { href: "/personnel", label: t('personnel') },
     { href: "/news", label: t('news') },
     { href: "/projects", label: t('projects') },
@@ -57,15 +71,38 @@ export function Header() {
 
   const NavContent = () => (
     <>
-      {navLinks.map((link) => (
-        <Button key={link.href} asChild variant="ghost" className={cn(
-          "w-full justify-start",
-          isMobile ? "text-lg py-4" : "",
-          pathname === link.href ? "bg-accent text-accent-foreground" : ""
-        )}>
-          <Link href={link.href} onClick={() => setSheetOpen(false)}>{link.label}</Link>
-        </Button>
-      ))}
+      {navLinks.map((link) => {
+        if (link.subLinks) {
+          return (
+            <DropdownMenu key={link.href}>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className={cn(
+                  "flex items-center",
+                  isMobile ? "w-full justify-start text-lg py-4" : "",
+                  pathname.startsWith(link.href) ? "bg-accent text-accent-foreground" : ""
+                )}>
+                  {link.label} <ChevronDown className="ml-1 h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align={isMobile ? "start" : "center"}>
+                {link.subLinks.map(subLink => (
+                  <DropdownMenuItem key={subLink.href} asChild>
+                    <Link href={subLink.href} onClick={() => setSheetOpen(false)}>{subLink.label}</Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+          )
+        }
+        return (
+          <Button key={link.href} asChild variant="ghost" className={cn(
+             isMobile ? "w-full justify-start text-lg py-4" : "",
+             pathname === link.href ? "bg-accent text-accent-foreground" : ""
+          )}>
+            <Link href={link.href} onClick={() => setSheetOpen(false)}>{link.label}</Link>
+          </Button>
+        )
+      })}
     </>
   );
 
@@ -107,7 +144,7 @@ export function Header() {
           </div>
         ) : (
           <>
-            <nav className="hidden md:flex items-center gap-2">
+            <nav className="hidden md:flex items-center gap-1">
               <NavContent />
             </nav>
             <div className="hidden md:flex items-center gap-4">

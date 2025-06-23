@@ -11,6 +11,9 @@ export const translations = {
     aiSearch: 'AI Search...',
     portalName: 'PKHDTIUH Portal',
     portalShortName: 'PKHDTIUH',
+    generalIntroduction: 'General Introduction',
+    functionsAndMission: 'Functions & Mission',
+    historyAndAchievements: 'History & Achievements',
 
     // Footer
     footerSlogan: 'Providing transparent and efficient public services.',
@@ -108,6 +111,9 @@ export const translations = {
     aiSearch: 'Tìm kiếm AI...',
     portalName: 'Cổng thông tin PKHDTIUH',
     portalShortName: 'PKHDTIUH',
+    generalIntroduction: 'Giới thiệu chung',
+    functionsAndMission: 'Chức năng – Nhiệm vụ',
+    historyAndAchievements: 'Lịch sử hình thành & Thành tích',
 
     // Footer
     footerSlogan: 'Cung cấp các dịch vụ công minh bạch và hiệu quả.',
