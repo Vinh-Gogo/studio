@@ -148,6 +148,9 @@ export const translations = {
     sendMessage: 'Send Message',
     contactInfo: 'Contact Information',
     ourLocation: 'Our Location',
+    contactViaFanpage: 'Contact via Fanpage',
+    fanpageContactPrompt: 'For any questions, please contact us via our Fanpage or the adjacent form for the fastest support.',
+
 
     // FAQ Page
     faqTitle: 'Frequently Asked Questions',
@@ -312,6 +315,8 @@ export const translations = {
     sendMessage: 'Gửi tin nhắn',
     contactInfo: 'Thông tin liên hệ',
     ourLocation: 'Vị trí của chúng tôi',
+    contactViaFanpage: 'Liên hệ qua Fanpage',
+    fanpageContactPrompt: 'Nếu có thắc mắc, vui lòng liên hệ với chúng tôi qua Fanpage hoặc biểu mẫu bên cạnh để được hỗ trợ nhanh nhất.',
 
     // FAQ Page
     faqTitle: 'Các câu hỏi thường gặp',
