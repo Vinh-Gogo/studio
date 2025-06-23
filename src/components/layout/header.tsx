@@ -89,7 +89,14 @@ export function Header() {
         { href: "/news?category=other", label: t('otherNews') },
       ]
     },
-    { href: "/projects", label: t('projects'), key: 'projects' },
+    { 
+      key: 'projects',
+      label: t('projects'),
+      subLinks: [
+        { href: "/projects", label: t('projectInformation') },
+        { href: "/projects/plans", label: t('projectPlans') },
+      ]
+    },
     { href: "/documents", label: t('documents'), key: 'documents' },
     { href: "/faq", label: t('faq'), key: 'faq' },
     { href: "/contact", label: t('contact'), key: 'contact' },

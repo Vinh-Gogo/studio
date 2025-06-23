@@ -1,6 +1,5 @@
 
 "use client"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { projectData, type Project } from "@/lib/data"
 import { Badge } from "@/components/ui/badge"
@@ -54,12 +53,11 @@ function ProjectList({ projects, t }: { projects: Project[], t: Function }) {
     )
 }
 
-export default function ProjectsPage() {
+export default function ProjectPlansPage() {
   const { t, language } = useLanguage()
   const currentProjectData = projectData[language]
 
-  const ongoingProjects = currentProjectData.filter(p => p.status === "Ongoing");
-  const completedProjects = currentProjectData.filter(p => p.status === "Completed");
+  const procurementProjects = currentProjectData.filter(p => p.status === "Procurement");
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -74,29 +72,18 @@ export default function ProjectsPage() {
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
                 <BreadcrumbItem>
-                    <BreadcrumbPage>{t('projectInformation')}</BreadcrumbPage>
+                    <BreadcrumbPage>{t('projectPlans')}</BreadcrumbPage>
                 </BreadcrumbItem>
             </BreadcrumbList>
         </Breadcrumb>
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">{t('projectInformation')}</h1>
+        <h1 className="text-4xl md:text-5xl font-headline font-bold text-primary">{t('projectPlans')}</h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
           {t('projectsSubtitle')}
         </p>
       </div>
 
-      <Tabs defaultValue="ongoing" className="w-full">
-        <TabsList className="grid w-full grid-cols-2 mx-auto max-w-lg">
-          <TabsTrigger value="ongoing">{t('ongoing')}</TabsTrigger>
-          <TabsTrigger value="completed">{t('completed')}</TabsTrigger>
-        </TabsList>
-        <TabsContent value="ongoing">
-          <ProjectList projects={ongoingProjects} t={t} />
-        </TabsContent>
-        <TabsContent value="completed">
-          <ProjectList projects={completedProjects} t={t} />
-        </TabsContent>
-      </Tabs>
+      <ProjectList projects={procurementProjects} t={t} />
     </div>
   )
 }
