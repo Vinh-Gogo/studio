@@ -8,3 +8,5 @@ To get started, take a look at src/app/page.tsx.bash
 
     ```bash
     npm run dev
+
+![alt text](image.png)
