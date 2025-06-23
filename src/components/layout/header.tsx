@@ -60,6 +60,12 @@ export function Header() {
   const pathname = usePathname()
   const [isSheetOpen, setSheetOpen] = React.useState(false);
   const { t } = useLanguage();
+  const [isClient, setIsClient] = React.useState(false)
+
+  React.useEffect(() => {
+    setIsClient(true)
+  }, [])
+
 
   const navLinks = [
     { href: "/", label: t('home'), key: 'home' },
@@ -105,6 +111,7 @@ export function Header() {
   const NavContent = () => (
     <>
       {navLinks.map((link) => {
+        const isMobileNav = isClient && isMobile;
         if (link.subLinks) {
           const isParentActive = pathname.startsWith(`/${link.key}`);
           return (
@@ -112,13 +119,13 @@ export function Header() {
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className={cn(
                   "flex items-center uppercase font-semibold",
-                  isMobile ? "w-full justify-start text-lg py-4" : "",
+                  isMobileNav ? "w-full justify-start text-lg py-4" : "",
                   isParentActive ? "bg-accent text-accent-foreground" : ""
                 )}>
                   {link.label} <ChevronDown className="ml-1 h-4 w-4" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align={isMobile ? "start" : "center"}>
+              <DropdownMenuContent align={isMobileNav ? "start" : "center"}>
                 {link.subLinks.map(subLink => (
                   <DropdownMenuItem key={subLink.href} asChild>
                     <Link href={subLink.href} onClick={() => setSheetOpen(false)}>{subLink.label}</Link>
@@ -131,7 +138,7 @@ export function Header() {
         return (
           <Button key={link.key} asChild variant="ghost" className={cn(
              "uppercase font-semibold",
-             isMobile ? "w-full justify-start text-lg py-4" : "",
+             isMobileNav ? "w-full justify-start text-lg py-4" : "",
              pathname === link.href ? "bg-accent text-accent-foreground" : ""
           )}>
             <Link href={link.href!} onClick={() => setSheetOpen(false)}>{link.label}</Link>
@@ -163,7 +170,7 @@ export function Header() {
                     <IuhLogo />
                 </Link>
                 
-                {isMobile ? (
+                {isClient && isMobile ? (
                 <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
                     <SheetTrigger asChild>
                         <Button variant="ghost" size="icon">
