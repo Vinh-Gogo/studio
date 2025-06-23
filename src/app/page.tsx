@@ -1,3 +1,131 @@
+import Link from "next/link"
+import Image from "next/image"
+import { ArrowRight, Building, Briefcase, Users, Newspaper } from "lucide-react"
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import { newsData } from "@/lib/data"
+
 export default function Home() {
-  return <></>;
+  const latestNews = newsData.slice(0, 5);
+
+  return (
+    <div className="flex flex-col">
+      {/* Banner Section */}
+      <section className="relative h-[60vh] w-full bg-blue-900 text-white flex items-center justify-center">
+        <Image
+          src="https://placehold.co/1800x800.png"
+          alt="Department building"
+          layout="fill"
+          objectFit="cover"
+          className="opacity-20"
+          data-ai-hint="government building modern"
+        />
+        <div className="relative z-10 text-center p-4">
+          <h1 className="text-4xl md:text-6xl font-headline font-bold drop-shadow-md">
+            PKHDTIUH Portal
+          </h1>
+          <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto drop-shadow-sm">
+            Your central hub for information, services, and updates from our department.
+          </p>
+          <Button asChild className="mt-8 bg-accent text-accent-foreground hover:bg-accent/90">
+            <Link href="/department">
+              Learn More About Us <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
+      </section>
+
+      {/* News Slider Section */}
+      <section className="py-12 md:py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-headline font-bold text-center mb-10">Latest News & Announcements</h2>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {latestNews.map((news) => (
+                <CarouselItem key={news.id} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Card className="h-full flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                      <Image
+                        src={news.image}
+                        alt={news.title}
+                        width={600}
+                        height={400}
+                        className="rounded-t-lg object-cover aspect-[3/2]"
+                        data-ai-hint="news article government"
+                      />
+                      <CardHeader>
+                        <CardTitle className="text-xl font-bold">{news.title}</CardTitle>
+                        <CardDescription>{news.date}</CardDescription>
+                      </CardHeader>
+                      <CardContent className="flex-grow">
+                        <p className="text-muted-foreground">{news.content.substring(0, 100)}...</p>
+                      </CardContent>
+                      <div className="p-6 pt-0">
+                         <Button asChild variant="link" className="p-0 h-auto">
+                           <Link href={`/news/${news.slug}`}>Read More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                         </Button>
+                      </div>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
+          <div className="text-center mt-8">
+            <Button asChild variant="outline">
+              <Link href="/news">View All News</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Sections Introduction */}
+      <section className="py-12 md:py-20 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div className="flex flex-col items-center">
+              <Building className="h-12 w-12 text-primary mb-4" />
+              <h3 className="text-2xl font-headline font-semibold mb-2">Our Department</h3>
+              <p className="text-muted-foreground mb-4">Discover our history, functions, and achievements.</p>
+              <Button asChild variant="secondary">
+                <Link href="/department">Explore Department</Link>
+              </Button>
+            </div>
+            <div className="flex flex-col items-center">
+              <Users className="h-12 w-12 text-primary mb-4" />
+              <h3 className="text-2xl font-headline font-semibold mb-2">Our People</h3>
+              <p className="text-muted-foreground mb-4">Meet our leadership and dedicated staff members.</p>
+              <Button asChild variant="secondary">
+                <Link href="/personnel">See Personnel</Link>
+              </Button>
+            </div>
+            <div className="flex flex-col items-center">
+              <Briefcase className="h-12 w-12 text-primary mb-4" />
+              <h3 className="text-2xl font-headline font-semibold mb-2">Our Work</h3>
+              <p className="text-muted-foreground mb-4">Learn about our ongoing projects and future plans.</p>
+              <Button asChild variant="secondary">
+                <Link href="/projects">View Projects</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
 }
