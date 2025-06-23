@@ -110,7 +110,15 @@ export function Header() {
         { href: "/projects/plans", label: t('procurementList') },
       ]
     },
-    { href: "/documents", label: t('documents'), key: 'documents' },
+    { 
+      key: 'documents',
+      label: t('documents'),
+      subLinks: [
+        { href: "/documents/decisions-regulations", label: t('decisionsAndRegulations') },
+        { href: "/documents/administrative-forms", label: t('administrativeForms') },
+        { href: "/documents/reports-statistics", label: t('reportsAndStatistics') },
+      ]
+    },
     { href: "/faq", label: t('faq'), key: 'faq' },
     { href: "/contact", label: t('contact'), key: 'contact' },
   ]

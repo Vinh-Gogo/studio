@@ -130,6 +130,11 @@ export const translations = {
     // FAQ Page
     faqTitle: 'Frequently Asked Questions',
     faqSubtitle: 'Find answers to common questions about our department and services.',
+    
+    // New Document Keys
+    decisionsAndRegulations: 'Decisions & Regulations',
+    administrativeForms: 'Administrative Forms',
+    reportsAndStatistics: 'Reports & Statistics',
   },
   vi: {
     // Header
@@ -261,6 +266,11 @@ export const translations = {
     // FAQ Page
     faqTitle: 'Các câu hỏi thường gặp',
     faqSubtitle: 'Tìm câu trả lời cho các câu hỏi phổ biến về phòng ban và dịch vụ của chúng tôi.',
+    
+    // New Document Keys
+    decisionsAndRegulations: 'Quyết định – Quy chế',
+    administrativeForms: 'Biểu mẫu hành chính',
+    reportsAndStatistics: 'Báo cáo – Thống kê',
   },
 };
 
