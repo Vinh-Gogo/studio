@@ -1,55 +1,52 @@
-# Firebase Studio
-This is a NextJS starter in Firebase Studio.
+# Firebase Studio - Giai đoạn FE
 
-`Build website with AI`
-This is a NextJS starter in Firebase Studio.
+## Chào mừng đến với Firebase Studio!
 
-`Build website with AI`
+Đây là dự án NextJS starter đang được phát triển trong Firebase Studio. Dự án này tập trung vào giai đoạn phát triển Front-end (FE).
 
-To get started, take a look at src/app/page.tsx.
+`Build website with AI` - Xây dựng website với sự hỗ trợ của AI
 
-## Getting Started
+## Bắt đầu
 
-First, run the development server:
+Để bắt đầu làm việc với dự án, hãy làm theo các bước sau:
 
-```bash
-npm install
-```
+1.  Cài đặt các dependencies cần thiết:
 
-Then, run the development server:
-
-```bash
-npm run dev
-```
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## Images
-
-
-To get started, take a look at src/app/page.tsx.bash
+    ```bash
     npm install
     ```
-2.  Run the development server:
+
+2.  Chạy máy chủ phát triển:
 
     ```bash
     npm run dev
+    ```
 
-![alt text](image.png)
+Dự án sẽ chạy trên `http://localhost:3000`.
 
-![alt text](image-1.png)
+Để tìm hiểu sâu hơn về cấu trúc dự án, hãy bắt đầu với tệp `src/app/page.tsx`.
 
-![alt text](image-2.png)
+## Tìm hiểu thêm về Next.js
+
+Dự án này sử dụng Next.js, một React framework mạnh mẽ. Dưới đây là một số tài nguyên hữu ích để bạn tìm hiểu thêm:
+
+-   [Next.js Documentation](https://nextjs.org/docs) - Tài liệu chính thức về các tính năng và API của Next.js.
+-   [Learn Next.js](https://nextjs.org/learn) - Hướng dẫn tương tác để học Next.js.
+
+Bạn cũng có thể xem [kho mã nguồn Next.js trên GitHub](https://github.com/vercel/next.js/) - phản hồi và đóng góp của bạn luôn được chào đón!
+
+## Triển khai (Deployment)
+
+Cách dễ nhất để triển khai ứng dụng Next.js của bạn là sử dụng [Nền tảng Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme), được phát triển bởi những người sáng tạo ra Next.js.
+
+Xem chi tiết về cách triển khai Next.js trong [tài liệu của chúng tôi](https://nextjs.org/docs/deployment).
+
+## Hình ảnh minh họa
+
+Dưới đây là một số hình ảnh về giao diện dự án (đang trong quá trình phát triển FE):
+
+![Giao diện trang chủ](image.png)
+
+![Một phần khác của giao diện](image-1.png)
+
+![Ví dụ về components](image-2.png)
