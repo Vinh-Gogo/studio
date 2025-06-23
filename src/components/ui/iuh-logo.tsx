@@ -29,7 +29,13 @@ export const IuhLogo = ({ className, ...props }: React.HTMLAttributes<HTMLDivEle
           className="font-extrabold text-[11px] leading-tight whitespace-nowrap"
           style={{ color: "#002D72" }} // Blue color from logo
         >
-          INDUSTRIAL UNIVERSITY OF
+          INDUSTRIAL
+        </span>
+        <span
+          className="font-extrabold text-[11px] leading-tight whitespace-nowrap"
+          style={{ color: "#002D72" }}
+        >
+          UNIVERSITY OF
         </span>
         <span
           className="font-extrabold text-[11px] leading-tight whitespace-nowrap"
