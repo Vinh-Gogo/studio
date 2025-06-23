@@ -16,11 +16,25 @@ import { newsData } from "@/lib/data"
 import { useLanguage } from "@/contexts/language-context"
 import * as React from "react"
 import Autoplay from "embla-carousel-autoplay"
+import { Badge } from "@/components/ui/badge"
+import { differenceInDays, parse } from "date-fns"
+
+const isNew = (dateStr: string, lang: 'vi' | 'en'): boolean => {
+  try {
+    const format = lang === 'vi' ? 'dd-MM-yyyy' : 'yyyy-MM-dd';
+    const date = parse(dateStr, format, new Date());
+    if (isNaN(date.getTime())) return false;
+    return differenceInDays(new Date(), date) <= 7;
+  } catch (e) {
+    return false;
+  }
+};
 
 export default function Home() {
   const { t, language } = useLanguage()
   const currentNewsData = newsData[language]
   const latestNews = currentNewsData.slice(0, 5);
+  const newBadgeText = t('newBadge');
 
   const bannerImages = [
     { src: "https://placehold.co/1800x800.png", hint: "university campus modern" },
@@ -91,14 +105,21 @@ export default function Home() {
                 <CarouselItem key={news.id} className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
                     <Card className="h-full flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                      <Image
-                        src={news.image}
-                        alt={news.title}
-                        width={600}
-                        height={400}
-                        className="rounded-t-lg object-cover aspect-[3/2]"
-                        data-ai-hint="news article government"
-                      />
+                      <div className="relative">
+                        <Image
+                          src={news.image}
+                          alt={news.title}
+                          width={600}
+                          height={400}
+                          className="rounded-t-lg object-cover aspect-[3/2]"
+                          data-ai-hint="news article government"
+                        />
+                        {isNew(news.date, language) && (
+                          <Badge variant="destructive" className="absolute top-2 right-2">
+                            {newBadgeText}
+                          </Badge>
+                        )}
+                      </div>
                       <CardHeader>
                         <CardTitle className="text-xl font-bold">{news.title}</CardTitle>
                         <CardDescription>{news.date}</CardDescription>
@@ -151,7 +172,7 @@ export default function Home() {
               </div>
               <div className="flex justify-end">
                 <Button asChild variant="outline" size="icon" className="rounded-full">
-                  <Link href="/personnel"><ArrowRight className="h-4 w-4" /></Link>
+                  <Link href="/personnel/leadership"><ArrowRight className="h-4 w-4" /></Link>
                 </Button>
               </div>
             </div>
