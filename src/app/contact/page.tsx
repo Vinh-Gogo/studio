@@ -57,21 +57,21 @@ export default function ContactPage() {
                         </CardHeader>
                         <CardContent className="space-y-4 text-muted-foreground">
                             <div className="flex items-start gap-4">
-                                <MapPin className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                                <MapPin className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                                 <div>
                                     <h4 className="font-semibold text-foreground">{t('address')}</h4>
                                     <p>12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, Thành phố Hồ Chí Minh</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
-                                <Phone className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                                <Phone className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                                 <div>
                                     <h4 className="font-semibold text-foreground">Phone</h4>
                                     <p>(028) 3894 0390</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
-                                <Mail className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
+                                <Mail className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                                 <div>
                                     <h4 className="font-semibold text-foreground">Email</h4>
                                     <p>

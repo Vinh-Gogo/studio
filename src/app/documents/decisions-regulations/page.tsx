@@ -124,7 +124,7 @@ export default function DecisionsRegulationsPage() {
                 filteredDocuments.map(doc => (
                 <TableRow key={doc.id}>
                     <TableCell className="font-medium flex items-center gap-2">
-                        {doc.format === "PDF" ? <FileText className="h-5 w-5 text-red-500" /> : <FileCode className="h-5 w-5 text-blue-500" />}
+                        {doc.format === "PDF" ? <FileText className="h-5 w-5 text-destructive" /> : <FileCode className="h-5 w-5 text-accent" />}
                         {doc.name}
                     </TableCell>
                     <TableCell>{doc.type}</TableCell>

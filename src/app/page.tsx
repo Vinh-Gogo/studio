@@ -70,7 +70,7 @@ export default function Home() {
           </CarouselContent>
         </Carousel>
 
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-red-600/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-accent/50 to-primary/50"></div>
         
         <div className="absolute inset-0 z-10 flex items-center justify-center">
           <div className="text-center p-4">
