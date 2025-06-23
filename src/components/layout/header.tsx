@@ -3,7 +3,7 @@
 
 import Link from "next/link"
 import { usePathname, useRouter } from "next/navigation"
-import { Landmark, Menu, Search, X, ChevronDown } from "lucide-react"
+import { Menu, Search, X, ChevronDown } from "lucide-react"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -18,6 +18,7 @@ import { cn } from "@/lib/utils"
 import React from "react"
 import { useLanguage } from "@/contexts/language-context"
 import { LanguageSwitcher } from "../language-switcher"
+import { IuhLogo } from "@/components/ui/iuh-logo"
 
 function SearchBar() {
     const router = useRouter();
@@ -78,7 +79,7 @@ export function Header() {
             <DropdownMenu key={link.key}>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className={cn(
-                  "flex items-center",
+                  "flex items-center uppercase font-semibold",
                   isMobile ? "w-full justify-start text-lg py-4" : "",
                   isParentActive ? "bg-accent text-accent-foreground" : ""
                 )}>
@@ -97,6 +98,7 @@ export function Header() {
         }
         return (
           <Button key={link.key} asChild variant="ghost" className={cn(
+             "uppercase font-semibold",
              isMobile ? "w-full justify-start text-lg py-4" : "",
              pathname === link.href ? "bg-accent text-accent-foreground" : ""
           )}>
@@ -109,10 +111,9 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-card shadow-sm">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <Link href="/" className="flex items-center gap-2 font-bold text-lg">
-          <Landmark className="h-7 w-7 text-primary" />
-          <span className="hidden sm:inline-block font-headline">{t('portalName')}</span>
+      <div className="container mx-auto flex h-20 items-center justify-between px-4">
+        <Link href="/" className="flex items-center">
+          <IuhLogo />
         </Link>
         
         {isMobile ? (
@@ -126,9 +127,8 @@ export function Header() {
               </SheetTrigger>
               <SheetContent side="right" className="w-full max-w-xs p-4 flex flex-col">
                  <div className="flex justify-between items-center mb-6">
-                   <Link href="/" className="flex items-center gap-2 font-bold text-lg" onClick={() => setSheetOpen(false)}>
-                      <Landmark className="h-6 w-6 text-primary" />
-                      <span className="font-headline">{t('portalShortName')}</span>
+                   <Link href="/" className="flex items-center" onClick={() => setSheetOpen(false)}>
+                      <IuhLogo />
                   </Link>
                   <Button variant="ghost" size="icon" onClick={() => setSheetOpen(false)}>
                       <X className="h-6 w-6"/>
