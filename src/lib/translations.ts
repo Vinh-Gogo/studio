@@ -124,6 +124,7 @@ export const translations = {
     message: 'Message',
     sendMessage: 'Send Message',
     contactInfo: 'Contact Information',
+    ourLocation: 'Our Location',
 
     // FAQ Page
     faqTitle: 'Frequently Asked Questions',
@@ -253,6 +254,7 @@ export const translations = {
     message: 'Nội dung',
     sendMessage: 'Gửi tin nhắn',
     contactInfo: 'Thông tin liên hệ',
+    ourLocation: 'Vị trí của chúng tôi',
 
     // FAQ Page
     faqTitle: 'Các câu hỏi thường gặp',
