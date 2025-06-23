@@ -16,6 +16,8 @@ export const translations = {
     generalIntroduction: 'General Introduction',
     functionsAndMission: 'Functions & Mission',
     historyAndAchievements: 'History & Achievements',
+    departmentLeadership: 'Leadership',
+    organizationalStructure: 'Organizational Structure',
 
     // Footer
     footerSlogan: 'Providing transparent and efficient public services.',
@@ -137,6 +139,8 @@ export const translations = {
     generalIntroduction: 'Giới thiệu chung',
     functionsAndMission: 'Chức năng – Nhiệm vụ',
     historyAndAchievements: 'Lịch sử hình thành & Thành tích',
+    departmentLeadership: 'Lãnh đạo phòng',
+    organizationalStructure: 'Cơ cấu tổ chức',
 
     // Footer
     footerSlogan: 'Cung cấp các dịch vụ công minh bạch và hiệu quả.',

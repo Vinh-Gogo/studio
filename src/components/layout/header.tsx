@@ -72,7 +72,14 @@ export function Header() {
         { href: "/department/history-achievements", label: t('historyAndAchievements') },
       ]
     },
-    { href: "/personnel", label: t('personnel'), key: 'personnel' },
+    { 
+      key: 'personnel',
+      label: t('personnel'),
+      subLinks: [
+        { href: "/personnel/leadership", label: t('departmentLeadership') },
+        { href: "/personnel/structure", label: t('organizationalStructure') },
+      ]
+    },
     { href: "/news", label: t('news'), key: 'news' },
     { href: "/projects", label: t('projects'), key: 'projects' },
     { href: "/documents", label: t('documents'), key: 'documents' },
@@ -84,7 +91,7 @@ export function Header() {
     <>
       {navLinks.map((link) => {
         if (link.subLinks) {
-          const isParentActive = pathname.startsWith("/department");
+          const isParentActive = pathname.startsWith(`/${link.key}`);
           return (
             <DropdownMenu key={link.key}>
               <DropdownMenuTrigger asChild>
