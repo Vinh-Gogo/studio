@@ -136,30 +136,42 @@ export default function Home() {
       {/* Key Sections Introduction */}
       <section className="py-12 md:py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <Building className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-2xl font-headline font-semibold mb-2">{t('ourDepartment')}</h3>
-              <p className="text-muted-foreground mb-4">{t('ourDepartmentDesc')}</p>
-              <Button asChild variant="secondary">
-                <Link href="/department">{t('exploreDepartment')}</Link>
-              </Button>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-card p-6 rounded-lg border flex flex-col shadow-sm transition-shadow hover:shadow-lg">
+              <div className="flex-grow">
+                <Building className="h-12 w-12 text-primary mb-4" />
+                <h3 className="text-2xl font-headline font-semibold mb-2">{t('ourDepartment')}</h3>
+                <p className="text-muted-foreground mb-4">{t('ourDepartmentDesc')}</p>
+              </div>
+              <div className="flex justify-end">
+                <Button asChild variant="outline" size="icon" className="rounded-full">
+                  <Link href="/department"><ArrowRight className="h-4 w-4" /></Link>
+                </Button>
+              </div>
             </div>
-            <div className="flex flex-col items-center">
-              <Users className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-2xl font-headline font-semibold mb-2">{t('ourPeople')}</h3>
-              <p className="text-muted-foreground mb-4">{t('ourPeopleDesc')}</p>
-              <Button asChild variant="secondary">
-                <Link href="/personnel">{t('seePersonnel')}</Link>
-              </Button>
+            <div className="bg-card p-6 rounded-lg border flex flex-col shadow-sm transition-shadow hover:shadow-lg">
+              <div className="flex-grow">
+                <Users className="h-12 w-12 text-primary mb-4" />
+                <h3 className="text-2xl font-headline font-semibold mb-2">{t('ourPeople')}</h3>
+                <p className="text-muted-foreground mb-4">{t('ourPeopleDesc')}</p>
+              </div>
+              <div className="flex justify-end">
+                <Button asChild variant="outline" size="icon" className="rounded-full">
+                  <Link href="/personnel"><ArrowRight className="h-4 w-4" /></Link>
+                </Button>
+              </div>
             </div>
-            <div className="flex flex-col items-center">
-              <Briefcase className="h-12 w-12 text-primary mb-4" />
-              <h3 className="text-2xl font-headline font-semibold mb-2">{t('ourWork')}</h3>
-              <p className="text-muted-foreground mb-4">{t('ourWorkDesc')}</p>
-              <Button asChild variant="secondary">
-                <Link href="/projects">{t('viewProjects')}</Link>
-              </Button>
+            <div className="bg-card p-6 rounded-lg border flex flex-col shadow-sm transition-shadow hover:shadow-lg">
+              <div className="flex-grow">
+                <Briefcase className="h-12 w-12 text-primary mb-4" />
+                <h3 className="text-2xl font-headline font-semibold mb-2">{t('ourWork')}</h3>
+                <p className="text-muted-foreground mb-4">{t('ourWorkDesc')}</p>
+              </div>
+              <div className="flex justify-end">
+                <Button asChild variant="outline" size="icon" className="rounded-full">
+                  <Link href="/projects"><ArrowRight className="h-4 w-4" /></Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
