@@ -9,24 +9,47 @@ import { newsData, type News } from "@/lib/data"
 import { ArrowRight } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
 import { useSearchParams } from "next/navigation"
+import { Badge } from "@/components/ui/badge"
+import { differenceInDays, parse } from "date-fns"
 
-function NewsGrid({ news, readMoreText }: { news: News[], readMoreText: string }) {
+const isNew = (dateStr: string, lang: 'vi' | 'en'): boolean => {
+  try {
+    const format = lang === 'vi' ? 'dd-MM-yyyy' : 'yyyy-MM-dd';
+    const date = parse(dateStr, format, new Date());
+    if (isNaN(date.getTime())) return false;
+    return differenceInDays(new Date(), date) <= 7;
+  } catch (e) {
+    return false;
+  }
+};
+
+function NewsGrid({ news, readMoreText, language }: { news: News[], readMoreText: string, language: 'vi' | 'en' }) {
+  const { t } = useLanguage();
+  const newBadgeText = t('newBadge');
+
   if (news.length === 0) {
-    return <p className="text-muted-foreground mt-8 text-center">{useLanguage().t('noNewsInCategory')}</p>;
+    return <p className="text-muted-foreground mt-8 text-center">{t('noNewsInCategory')}</p>;
   }
   
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
       {news.map(item => (
         <Card key={item.id} className="flex flex-col hover:shadow-xl transition-shadow">
-          <Image
-            src={item.image}
-            alt={item.title}
-            width={600}
-            height={400}
-            className="rounded-t-lg object-cover aspect-[3/2]"
-            data-ai-hint="news article government"
-          />
+          <div className="relative">
+            <Image
+              src={item.image}
+              alt={item.title}
+              width={600}
+              height={400}
+              className="rounded-t-lg object-cover aspect-[3/2]"
+              data-ai-hint="news article government"
+            />
+            {isNew(item.date, language) && (
+              <Badge variant="destructive" className="absolute top-2 right-2">
+                {newBadgeText}
+              </Badge>
+            )}
+          </div>
           <CardHeader>
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.date}</CardDescription>
@@ -68,23 +91,23 @@ export default function NewsPage() {
       </div>
 
       <Tabs defaultValue={defaultTab} className="w-full">
-        <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mx-auto max-w-2xl">
+        <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 gap-1 mx-auto max-w-2xl">
           <TabsTrigger value="all">{t('allNews')}</TabsTrigger>
           <TabsTrigger value="updates">{t('activityUpdates')}</TabsTrigger>
           <TabsTrigger value="quotations">{t('priceQuotations')}</TabsTrigger>
           <TabsTrigger value="other">{t('otherNews')}</TabsTrigger>
         </TabsList>
         <TabsContent value="all">
-          <NewsGrid news={currentNewsData} readMoreText={readMoreText} />
+          <NewsGrid news={currentNewsData} readMoreText={readMoreText} language={language}/>
         </TabsContent>
         <TabsContent value="updates">
-          <NewsGrid news={activityUpdates} readMoreText={readMoreText} />
+          <NewsGrid news={activityUpdates} readMoreText={readMoreText} language={language}/>
         </TabsContent>
         <TabsContent value="quotations">
-          <NewsGrid news={priceQuotations} readMoreText={readMoreText} />
+          <NewsGrid news={priceQuotations} readMoreText={readMoreText} language={language}/>
         </TabsContent>
         <TabsContent value="other">
-          <NewsGrid news={otherNews} readMoreText={readMoreText} />
+          <NewsGrid news={otherNews} readMoreText={readMoreText} language={language}/>
         </TabsContent>
       </Tabs>
     </div>

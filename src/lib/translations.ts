@@ -72,6 +72,7 @@ export const translations = {
     priceQuotations: 'Price Quotation Notices',
     otherNews: 'News from Press',
     noNewsInCategory: 'No news in this category yet.',
+    newBadge: 'New',
 
     // Projects Page
     projectsSubtitle: 'Explore our current initiatives, completed work, and procurement opportunities.',
@@ -195,6 +196,7 @@ export const translations = {
     priceQuotations: 'Thông báo mời chào giá',
     otherNews: 'Tin tức cập nhật từ các trang báo',
     noNewsInCategory: 'Chưa có tin tức trong danh mục này.',
+    newBadge: 'Mới',
 
     // Projects Page
     projectsSubtitle: 'Khám phá các sáng kiến hiện tại, công việc đã hoàn thành và các cơ hội mua sắm công.',
