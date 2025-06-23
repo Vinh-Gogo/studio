@@ -15,10 +15,10 @@ export default function NewsArticlePage({ params }: { params: { slug: string } }
     notFound()
   }
 
-  const categoryTranslations = {
+  const categoryTranslations: { [key: string]: string } = {
     "Activity Updates": t('activityUpdates'),
-    "Price Quotations": t('priceQuotations'),
-    "Other News": t('otherNews'),
+    "Bidding Notices": t('biddingNotices'),
+    "Work Schedule": t('workSchedule'),
   }
 
   return (

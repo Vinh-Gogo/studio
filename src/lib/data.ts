@@ -3,7 +3,7 @@ export type News = {
   slug: string;
   title: string;
   date: string;
-  category: "Activity Updates" | "Price Quotations" | "Other News";
+  category: "Activity Updates" | "Bidding Notices" | "Work Schedule";
   image: string;
   content: string;
 };
@@ -26,12 +26,12 @@ export const newsData: Multilingual<News> = {
     },
     {
       id: 2,
-      slug: "invitation-for-office-supply-quotations",
-      title: "Invitation for Office Supply Quotations",
+      slug: "invitation-for-office-supply-bidding",
+      title: "Invitation for Bidding on Office Supplies",
       date: "2024-07-18",
-      category: "Price Quotations",
+      category: "Bidding Notices",
       image: "https://images.unsplash.com/photo-1737255287794-24ce61ded34a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwNjY4NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      content: "We are inviting sealed quotations from eligible bidders for the procurement of office supplies for the fiscal year 2025. The deadline for submission is August 15, 2024. Please refer to the documents section for the detailed tender notice."
+      content: "We are inviting sealed bids from eligible bidders for the procurement of office supplies for the fiscal year 2025. The deadline for submission is August 15, 2024. Please refer to the documents section for the detailed tender notice."
     },
     {
       id: 3,
@@ -44,12 +44,12 @@ export const newsData: Multilingual<News> = {
     },
     {
       id: 4,
-      slug: "national-day-celebration-plans",
-      title: "National Day Celebration Plans Announced",
+      slug: "august-work-schedule",
+      title: "Department Work Schedule for August",
       date: "2024-07-10",
-      category: "Other News",
+      category: "Work Schedule",
       image: "https://images.unsplash.com/photo-1720025352295-953d7ad65b1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bmV3cyUyMGFydGljbGUlMjBnb3Zlcm5tZW50fGVufDB8fHx8MTc1MDY2ODY1NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      content: "The department has announced the schedule for the upcoming National Day celebrations. The event will include a parade, cultural performances, and a fireworks display. All citizens are welcome to join."
+      content: "The department has released the work and meeting schedule for August 2024. All staff are advised to check the internal portal for detailed timings and agendas."
     },
     {
       id: 5,
@@ -73,12 +73,12 @@ export const newsData: Multilingual<News> = {
     },
     {
       id: 2,
-      slug: "invitation-for-office-supply-quotations",
-      title: "Mời báo giá cung cấp văn phòng phẩm",
+      slug: "invitation-for-office-supply-bidding",
+      title: "Thông báo mời thầu cung cấp văn phòng phẩm",
       date: "18-07-2024",
-      category: "Price Quotations",
+      category: "Bidding Notices",
       image: "https://images.unsplash.com/photo-1737255287794-24ce61ded34a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwNjY4NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      content: "Chúng tôi mời các nhà thầu đủ điều kiện nộp báo giá kín cho việc mua sắm văn phòng phẩm cho năm tài chính 2025. Hạn chót nộp hồ sơ là ngày 15 tháng 8 năm 2024. Vui lòng tham khảo mục tài liệu để biết thông báo mời thầu chi tiết."
+      content: "Chúng tôi mời các nhà thầu đủ điều kiện nộp hồ sơ dự thầu kín cho việc mua sắm văn phòng phẩm cho năm tài chính 2025. Hạn chót nộp hồ sơ là ngày 15 tháng 8 năm 2024. Vui lòng tham khảo mục tài liệu để biết thông báo mời thầu chi tiết."
     },
     {
       id: 3,
@@ -91,12 +91,12 @@ export const newsData: Multilingual<News> = {
     },
     {
       id: 4,
-      slug: "national-day-celebration-plans",
-      title: "Công bố kế hoạch kỷ niệm Ngày Quốc khánh",
+      slug: "august-work-schedule",
+      title: "Lịch công tác tháng 8 của phòng ban",
       date: "10-07-2024",
-      category: "Other News",
+      category: "Work Schedule",
       image: "https://images.unsplash.com/photo-1720025352295-953d7ad65b1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bmV3cyUyMGFydGljbGUlMjBnb3Zlcm5tZW50fGVufDB8fHx8MTc1MDY2ODY1NHww&ixlib=rb-4.1.0&q=80&w=1080",
-      content: "Sở đã công bố lịch trình cho các hoạt động kỷ niệm Ngày Quốc khánh sắp tới. Sự kiện sẽ bao gồm diễu hành, biểu diễn văn hóa và bắn pháo hoa. Mời tất cả người dân tham gia."
+      content: "Phòng ban đã công bố lịch làm việc và lịch họp cho tháng 8 năm 2024. Toàn thể nhân viên vui lòng kiểm tra cổng thông tin nội bộ để biết thời gian và chương trình chi tiết."
     },
     {
       id: 5,

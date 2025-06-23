@@ -97,8 +97,8 @@ export function Header() {
       label: t('news'),
       subLinks: [
         { href: "/news?category=updates", label: t('activityUpdates') },
-        { href: "/news?category=quotations", label: t('priceQuotations') },
-        { href: "/news?category=other", label: t('otherNews') },
+        { href: "/news?category=bidding", label: t('biddingNotices') },
+        { href: "/news?category=schedule", label: t('workSchedule') },
       ]
     },
     { 

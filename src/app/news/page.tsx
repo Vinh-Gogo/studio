@@ -72,13 +72,13 @@ export default function NewsPage() {
   const { t, language } = useLanguage()
   const searchParams = useSearchParams()
   const category = searchParams.get('category')
-  const defaultTab = category && ['updates', 'quotations', 'other'].includes(category) ? category : 'all'
+  const defaultTab = category && ['updates', 'bidding', 'schedule'].includes(category) ? category : 'all'
   
   const currentNewsData = newsData[language]
 
   const activityUpdates = currentNewsData.filter(n => n.category === "Activity Updates");
-  const priceQuotations = currentNewsData.filter(n => n.category === "Price Quotations");
-  const otherNews = currentNewsData.filter(n => n.category === "Other News");
+  const biddingNotices = currentNewsData.filter(n => n.category === "Bidding Notices");
+  const workSchedule = currentNewsData.filter(n => n.category === "Work Schedule");
   const readMoreText = t('readMore');
 
   return (
@@ -94,8 +94,8 @@ export default function NewsPage() {
         <TabsList className="grid w-full grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4">
           <TabsTrigger value="all">{t('allNews')}</TabsTrigger>
           <TabsTrigger value="updates">{t('activityUpdates')}</TabsTrigger>
-          <TabsTrigger value="quotations">{t('priceQuotations')}</TabsTrigger>
-          <TabsTrigger value="other">{t('otherNews')}</TabsTrigger>
+          <TabsTrigger value="bidding">{t('biddingNotices')}</TabsTrigger>
+          <TabsTrigger value="schedule">{t('workSchedule')}</TabsTrigger>
         </TabsList>
         <TabsContent value="all">
           <NewsGrid news={currentNewsData} readMoreText={readMoreText} language={language}/>
@@ -103,11 +103,11 @@ export default function NewsPage() {
         <TabsContent value="updates">
           <NewsGrid news={activityUpdates} readMoreText={readMoreText} language={language}/>
         </TabsContent>
-        <TabsContent value="quotations">
-          <NewsGrid news={priceQuotations} readMoreText={readMoreText} language={language}/>
+        <TabsContent value="bidding">
+          <NewsGrid news={biddingNotices} readMoreText={readMoreText} language={language}/>
         </TabsContent>
-        <TabsContent value="other">
-          <NewsGrid news={otherNews} readMoreText={readMoreText} language={language}/>
+        <TabsContent value="schedule">
+          <NewsGrid news={workSchedule} readMoreText={readMoreText} language={language}/>
         </TabsContent>
       </Tabs>
     </div>

@@ -71,8 +71,8 @@ export const translations = {
     newsSubtitle: 'Stay informed with the latest updates, notices, and developments from our department.',
     allNews: 'All News',
     activityUpdates: 'Activity News',
-    priceQuotations: 'Price Quotation Notices',
-    otherNews: 'News from Press',
+    biddingNotices: 'Bidding Notices',
+    workSchedule: 'Work Schedule',
     noNewsInCategory: 'No news in this category yet.',
     newBadge: 'New',
 
@@ -201,8 +201,8 @@ export const translations = {
     newsSubtitle: 'Luôn cập nhật những thông tin, thông báo và sự phát triển mới nhất từ phòng ban của chúng tôi.',
     allNews: 'Tất cả tin tức',
     activityUpdates: 'Tin hoạt động',
-    priceQuotations: 'Thông báo mời chào giá',
-    otherNews: 'Tin tức cập nhật từ các trang báo',
+    biddingNotices: 'Thông báo đấu thầu',
+    workSchedule: 'Lịch công tác',
     noNewsInCategory: 'Chưa có tin tức trong danh mục này.',
     newBadge: 'Mới',
 
