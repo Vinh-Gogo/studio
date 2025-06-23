@@ -84,7 +84,7 @@ export function Header() {
         { href: "/department/history-achievements", label: t('historyAndAchievements') },
       ]
     },
-    { href: "/personnel", label: t('personnel'), key: 'personnel' },
+    { href: "/personnel/leadership", label: t('personnel'), key: 'personnel' },
     { 
       key: 'news',
       label: t('news'),
@@ -218,10 +218,6 @@ export function Header() {
         <div className="bg-accent text-accent-foreground">
             <div className="container mx-auto flex h-12 items-center justify-between px-4">
                 <div className="flex items-center gap-6 text-sm">
-                    <Link href="#" className="flex items-center gap-2 hover:underline">
-                        <Monitor className="h-4 w-4" />
-                        <span>{t('eOffice')}</span>
-                    </Link>
                     <Link href="#" className="flex items-center gap-2 hover:underline">
                         <Mail className="h-4 w-4" />
                         <span>{t('email')}</span>
