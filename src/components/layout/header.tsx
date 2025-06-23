@@ -174,8 +174,6 @@ export function Header() {
               onOpenChange={(isOpen) => {
                 if (!isOpen) {
                     setOpenMenuKey(null)
-                } else {
-                    setOpenMenuKey(link.key)
                 }
               }}
             >
@@ -188,7 +186,6 @@ export function Header() {
                   )}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
-                  onClick={() => setOpenMenuKey(openMenuKey === link.key ? null : link.key)}
                 >
                   {link.label} <ChevronDown className="ml-1 h-4 w-4" />
                 </Button>

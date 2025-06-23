@@ -9,7 +9,7 @@ type Language = 'en' | 'vi';
 interface LanguageContextType {
   language: Language;
   setLanguage: (language: Language) => void;
-  t: (key: TranslationKey, params?: {[key: string]: string | number}) => string;
+  t: (key: TranslationKey, templateParams?: {[key: string]: string | number}) => string;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
