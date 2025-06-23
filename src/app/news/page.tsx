@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { newsData, type News } from "@/lib/data"
 import { ArrowRight } from "lucide-react"
 import { useLanguage } from "@/contexts/language-context"
+import { useSearchParams } from "next/navigation"
 
 function NewsGrid({ news, readMoreText }: { news: News[], readMoreText: string }) {
   if (news.length === 0) {
@@ -46,6 +47,10 @@ function NewsGrid({ news, readMoreText }: { news: News[], readMoreText: string }
 
 export default function NewsPage() {
   const { t, language } = useLanguage()
+  const searchParams = useSearchParams()
+  const category = searchParams.get('category')
+  const defaultTab = category && ['updates', 'quotations', 'other'].includes(category) ? category : 'all'
+  
   const currentNewsData = newsData[language]
 
   const activityUpdates = currentNewsData.filter(n => n.category === "Activity Updates");
@@ -62,7 +67,7 @@ export default function NewsPage() {
         </p>
       </div>
 
-      <Tabs defaultValue="all" className="w-full">
+      <Tabs defaultValue={defaultTab} className="w-full">
         <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mx-auto max-w-2xl">
           <TabsTrigger value="all">{t('allNews')}</TabsTrigger>
           <TabsTrigger value="updates">{t('activityUpdates')}</TabsTrigger>

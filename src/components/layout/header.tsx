@@ -80,7 +80,15 @@ export function Header() {
         { href: "/personnel/structure", label: t('organizationalStructure') },
       ]
     },
-    { href: "/news", label: t('news'), key: 'news' },
+    { 
+      key: 'news',
+      label: t('news'),
+      subLinks: [
+        { href: "/news?category=updates", label: t('activityUpdates') },
+        { href: "/news?category=quotations", label: t('priceQuotations') },
+        { href: "/news?category=other", label: t('otherNews') },
+      ]
+    },
     { href: "/projects", label: t('projects'), key: 'projects' },
     { href: "/documents", label: t('documents'), key: 'documents' },
     { href: "/faq", label: t('faq'), key: 'faq' },

@@ -68,9 +68,9 @@ export const translations = {
     // News Page
     newsSubtitle: 'Stay informed with the latest updates, notices, and developments from our department.',
     allNews: 'All News',
-    activityUpdates: 'Activity Updates',
-    priceQuotations: 'Price Quotations',
-    otherNews: 'Other News',
+    activityUpdates: 'Activity News',
+    priceQuotations: 'Price Quotation Notices',
+    otherNews: 'News from Press',
     noNewsInCategory: 'No news in this category yet.',
 
     // Projects Page
@@ -191,9 +191,9 @@ export const translations = {
     // News Page
     newsSubtitle: 'Luôn cập nhật những thông tin, thông báo và sự phát triển mới nhất từ phòng ban của chúng tôi.',
     allNews: 'Tất cả tin tức',
-    activityUpdates: 'Cập nhật hoạt động',
-    priceQuotations: 'Báo giá',
-    otherNews: 'Tin tức khác',
+    activityUpdates: 'Tin hoạt động',
+    priceQuotations: 'Thông báo mời chào giá',
+    otherNews: 'Tin tức cập nhật từ các trang báo',
     noNewsInCategory: 'Chưa có tin tức trong danh mục này.',
 
     // Projects Page
