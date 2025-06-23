@@ -3,7 +3,7 @@ export const translations = {
   en: {
     // Header
     home: 'Home',
-    department: 'Department',
+    department: 'About Us',
     personnel: 'Personnel',
     news: 'News',
     projects: 'Projects',
@@ -43,13 +43,17 @@ export const translations = {
     viewProjects: 'View Projects',
     readMore: 'Read More',
 
-    // Department Page
-    aboutOurDepartment: 'About Our Department',
+    // Department Pages
     departmentSubtitle: 'Dedicated to serving the public with integrity, efficiency, and transparency.',
     ourMission: 'Our Mission',
     coreFunctions: 'Core Functions',
     ourHistory: 'Our History',
     achievements: 'Achievements',
+    functions: 'Functions',
+    duties: 'Duties',
+    performFinancialManagement: 'Perform financial revenues and expenditures',
+    prepareAnnualBudget: 'Prepare annual financial revenue and expenditure estimates:',
+    settleFundingSources: 'Settle funding sources:',
 
     // Personnel Page
     personnelTitle: 'Organizational Structure & Personnel',
@@ -143,13 +147,17 @@ export const translations = {
     viewProjects: 'Xem các dự án',
     readMore: 'Đọc thêm',
 
-    // Department Page
-    aboutOurDepartment: 'Về phòng ban của chúng tôi',
+    // Department Pages
     departmentSubtitle: 'Tận tâm phục vụ công chúng với sự chính trực, hiệu quả và minh bạch.',
     ourMission: 'Sứ mệnh của chúng tôi',
     coreFunctions: 'Chức năng cốt lõi',
     ourHistory: 'Lịch sử của chúng tôi',
     achievements: 'Thành tựu',
+    functions: 'Chức năng',
+    duties: 'Nhiệm vụ',
+    performFinancialManagement: 'Thực hiện thu chi tài chính',
+    prepareAnnualBudget: 'Lập dự toán thu chi tài chính hàng năm:',
+    settleFundingSources: 'Thanh quyết toán các nguồn kinh phí:',
     
     // Personnel Page
     personnelTitle: 'Cơ cấu tổ chức & Nhân sự',

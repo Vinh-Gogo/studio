@@ -53,33 +53,34 @@ export function Header() {
   const { t } = useLanguage();
 
   const navLinks = [
-    { href: "/", label: t('home') },
+    { href: "/", label: t('home'), key: 'home' },
     { 
-      href: "/department", 
+      key: 'department',
       label: t('department'),
       subLinks: [
-        { href: "/department#general-introduction", label: t('generalIntroduction') },
-        { href: "/department#functions-mission", label: t('functionsAndMission') },
-        { href: "/department#history-achievements", label: t('historyAndAchievements') },
+        { href: "/department", label: t('generalIntroduction') },
+        { href: "/department/functions-mission", label: t('functionsAndMission') },
+        { href: "/department/history-achievements", label: t('historyAndAchievements') },
       ]
     },
-    { href: "/personnel", label: t('personnel') },
-    { href: "/news", label: t('news') },
-    { href: "/projects", label: t('projects') },
-    { href: "/documents", label: t('documents') },
+    { href: "/personnel", label: t('personnel'), key: 'personnel' },
+    { href: "/news", label: t('news'), key: 'news' },
+    { href: "/projects", label: t('projects'), key: 'projects' },
+    { href: "/documents", label: t('documents'), key: 'documents' },
   ]
 
   const NavContent = () => (
     <>
       {navLinks.map((link) => {
         if (link.subLinks) {
+          const isParentActive = pathname.startsWith("/department");
           return (
-            <DropdownMenu key={link.href}>
+            <DropdownMenu key={link.key}>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className={cn(
                   "flex items-center",
                   isMobile ? "w-full justify-start text-lg py-4" : "",
-                  pathname.startsWith(link.href) ? "bg-accent text-accent-foreground" : ""
+                  isParentActive ? "bg-accent text-accent-foreground" : ""
                 )}>
                   {link.label} <ChevronDown className="ml-1 h-4 w-4" />
                 </Button>
@@ -95,11 +96,11 @@ export function Header() {
           )
         }
         return (
-          <Button key={link.href} asChild variant="ghost" className={cn(
+          <Button key={link.key} asChild variant="ghost" className={cn(
              isMobile ? "w-full justify-start text-lg py-4" : "",
              pathname === link.href ? "bg-accent text-accent-foreground" : ""
           )}>
-            <Link href={link.href} onClick={() => setSheetOpen(false)}>{link.label}</Link>
+            <Link href={link.href!} onClick={() => setSheetOpen(false)}>{link.label}</Link>
           </Button>
         )
       })}
