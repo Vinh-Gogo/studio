@@ -55,7 +55,7 @@ Xem chi tiết về cách triển khai Next.js trong [tài liệu của chúng t
 
 Dưới đây là một số hình ảnh về giao diện dự án (đang trong quá trình phát triển FE):
 
-![Giao diện trang chủ](/public/images/image.png)
+![Giao diện trang chủ](/public/images/image-home.png)
 
 ![Một phần khác của giao diện](/public/images/image-1.png)
 
