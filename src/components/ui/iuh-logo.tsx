@@ -6,7 +6,7 @@ export const IuhLogo = ({ className, ...props }: React.HTMLAttributes<HTMLDivEle
   return (
     <div className={cn("flex items-center", className)} {...props}>
       <Image
-        src="/public/images/Logo_IUH.png"
+        src="/images/Logo_IUH.png"
         alt="Industrial University of Ho Chi Minh City Logo"
         width={300}
         height={72}
