@@ -1,0 +1,1 @@
+Thư mục này dùng để lưu trữ các tài sản hình ảnh tĩnh cho trang web.
