@@ -28,18 +28,6 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
-      {
-        protocol: 'https',
-        hostname: 'iuh.edu.vn',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'www.iuh.edu.vn',
-        port: '',
-        pathname: '/**',
-      },
     ],
   },
 };
