@@ -28,6 +28,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'iuh.edu.vn',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
   // Thêm allowedDevOrigins vào đây
