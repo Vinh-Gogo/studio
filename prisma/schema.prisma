@@ -3,7 +3,7 @@
 
 generator client {
   provider      = "prisma-client-js"
-  binaryTargets = ["native", "debian-openssl-1.1.x"]
+  binaryTargets = ["native", "debian-openssl-3.0.x"]
 }
 
 datasource db {
@@ -14,7 +14,7 @@ datasource db {
 model Todo {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   text      String
-  completed Boolean  @default(false)
+  completed Boolean
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
@@ -23,7 +23,7 @@ model User {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   email     String   @unique
   password  String
-  role      String   @default("USER")
+  role      String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
