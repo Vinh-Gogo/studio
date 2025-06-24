@@ -34,10 +34,14 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.iuh.edu.vn',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
-  // Thêm allowedDevOrigins vào đây
-  allowedDevOrigins: ['local-origin.dev', '*.local-origin.dev'],
 };
 
 export default nextConfig;
