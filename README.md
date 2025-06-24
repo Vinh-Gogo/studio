@@ -6,6 +6,16 @@
 
 `Build website with AI` - Xây dựng website với sự hỗ trợ của AI
 
+## Công nghệ sử dụng
+
+Dự án này sử dụng các công nghệ chính sau:
+
+-   **Ngôn ngữ lập trình:** TypeScript (tập trung vào JavaScript với kiểu tĩnh).
+-   **Framework:** React (được xây dựng trên Next.js).
+-   **CSS Framework/Styling:** Tailwind CSS.
+-   **State Management:** (Nếu có, sẽ được bổ sung sau khi xác định rõ nhu cầu).
+-   **Linting/Formatting:** ESLint, Prettier.
+
 ## Bắt đầu
 
 Để bắt đầu làm việc với dự án, hãy làm theo các bước sau:
@@ -50,3 +60,4 @@ Dưới đây là một số hình ảnh về giao diện dự án (đang trong 
 ![Một phần khác của giao diện](image-1.png)
 
 ![Ví dụ về components](image-2.png)
+
