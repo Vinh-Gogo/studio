@@ -174,6 +174,8 @@ export function Header() {
               onOpenChange={(isOpen) => {
                 if (!isOpen) {
                     setOpenMenuKey(null)
+                } else {
+                  setOpenMenuKey(link.key)
                 }
               }}
             >
@@ -237,7 +239,7 @@ export function Header() {
                     </Link>
                 </div>
                 <div className="flex items-center gap-6 text-sm">
-                    <Link href="/contact" className="hidden md:block hover:underline">
+                    <Link href="/login" className="hidden md:block hover:underline">
                         <span>{t('connectContact')}</span>
                     </Link>
                     <LanguageSwitcher />

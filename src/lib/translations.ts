@@ -146,7 +146,16 @@ export const translations = {
     // Top bar
     email: 'EMAIL',
     libraryInfo: 'PLANNING - INVESTMENT DEPARTMENT - INDUSTRIAL UNIVERSITY OF HOCHIMINH CITY',
-    connectContact: 'CONNECT | CONTACT',
+    connectContact: 'Login',
+
+    // Login Page
+    login: 'Login',
+    loginTitle: 'Login to your Account',
+    loginSubtitle: 'Enter your credentials to access your dashboard.',
+    username: 'Username',
+    password: 'Password',
+    loginButton: 'Login',
+    forgotPassword: 'Forgot password?',
   },
   vi: {
     // Header
@@ -293,7 +302,16 @@ export const translations = {
     // Top bar
     email: 'EMAIL',
     libraryInfo: 'PHÒNG KẾ HOẠCH - ĐẦU TƯ - TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP TP.HCM',
-    connectContact: 'KẾT NỐI | LIÊN HỆ',
+    connectContact: 'Đăng nhập',
+
+     // Login Page
+     login: 'Đăng nhập',
+     loginTitle: 'Đăng nhập vào tài khoản',
+     loginSubtitle: 'Nhập thông tin xác thực để truy cập bảng điều khiển của bạn.',
+     username: 'Tên đăng nhập',
+     password: 'Mật khẩu',
+     loginButton: 'Đăng nhập',
+     forgotPassword: 'Quên mật khẩu?',
   },
 };
 
