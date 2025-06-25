@@ -22,7 +22,7 @@ export const newsData: Multilingual<News> = {
       title: "New Public Service Center Launch",
       date: "2024-07-20",
       category: "Activity Updates",
-      image: "https://images.unsplash.com/photo-1713948414133-c2cf74951e9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwNjY4NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1713948412274-d264923b2d81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "A new state-of-the-art public service center has been inaugurated to streamline citizen services. The center is equipped with modern technology to reduce waiting times and improve efficiency. It will offer over 50 different types of services under one roof."
     },
     {
@@ -31,7 +31,7 @@ export const newsData: Multilingual<News> = {
       title: "Invitation for Bidding on Office Supplies",
       date: "2024-07-18",
       category: "Bidding Notices",
-      image: "https://images.unsplash.com/photo-1737255287794-24ce61ded34a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwNjY4NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1737255287794-24ce61ded34a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "We are inviting sealed bids from eligible bidders for the procurement of office supplies for the fiscal year 2025. The deadline for submission is August 15, 2024. Please refer to the documents section for the detailed tender notice."
     },
     {
@@ -40,7 +40,7 @@ export const newsData: Multilingual<News> = {
       title: "Digital Transformation Seminar Held",
       date: "2024-07-15",
       category: "Activity Updates",
-      image: "https://images.unsplash.com/photo-1722684768315-11fc753354f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwNjY4NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1478940020726-e9e191651f1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "A successful seminar on digital transformation in governance was held, attended by experts from across the country. Key topics included AI in public administration, data security, and e-governance platforms."
     },
     {
@@ -49,7 +49,7 @@ export const newsData: Multilingual<News> = {
       title: "Department Work Schedule for August",
       date: "2024-07-10",
       category: "Work Schedule",
-      image: "https://images.unsplash.com/photo-1720025352295-953d7ad65b1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bmV3cyUyMGFydGljbGUlMjBnb3Zlcm5tZW50fGVufDB8fHx8MTc1MDY2ODY1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1737255287794-24ce61ded34a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "The department has released the work and meeting schedule for August 2024. All staff are advised to check the internal portal for detailed timings and agendas."
     },
     {
@@ -58,7 +58,7 @@ export const newsData: Multilingual<News> = {
       title: "Major Infrastructure Project Completed Ahead of Schedule",
       date: "2024-07-05",
       category: "Activity Updates",
-      image: "https://images.unsplash.com/photo-1621672134447-5c576fdef903?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwNjY4NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1621439618797-2b99f50d17d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "The Highway 1 expansion project has been completed two months ahead of schedule, easing traffic congestion and boosting regional connectivity. The project was a collaborative effort between multiple government agencies."
     },
     {
@@ -67,7 +67,7 @@ export const newsData: Multilingual<News> = {
       title: "Department Receives Award for Public Service Excellence",
       date: "2024-06-28",
       category: "Activity Updates",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1703381132774-caeab4f6a9db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Our department was honored with the National Award for Public Service Excellence for our commitment to transparency and citizen-centric services."
     },
     {
@@ -76,7 +76,7 @@ export const newsData: Multilingual<News> = {
       title: "Tender for IT Infrastructure Upgrade",
       date: "2024-06-25",
       category: "Bidding Notices",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1621439618797-2b99f50d17d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Bids are invited for the comprehensive upgrade of our IT infrastructure, including servers, networking, and security systems. Details are available in the documents section."
     },
     {
@@ -85,7 +85,7 @@ export const newsData: Multilingual<News> = {
       title: "September 2024 Departmental Meeting Schedule",
       date: "2024-06-20",
       category: "Work Schedule",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1478940020726-e9e191651f1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Please be advised of the upcoming departmental meetings for September 2024. All heads of departments are required to attend."
     },
     {
@@ -94,7 +94,7 @@ export const newsData: Multilingual<News> = {
       title: "Launch of New Citizen Feedback Portal",
       date: "2024-06-15",
       category: "Activity Updates",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1737255287794-24ce61ded34a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "We are excited to launch a new online portal for citizen feedback, making it easier for the public to share suggestions and report issues."
     },
     {
@@ -103,7 +103,7 @@ export const newsData: Multilingual<News> = {
       title: "Successful Blood Donation Drive Organized",
       date: "2024-06-10",
       category: "Activity Updates",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1703381132774-caeab4f6a9db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "The department successfully organized a blood donation drive in collaboration with the Red Cross, with over 200 employees participating."
     },
     {
@@ -112,7 +112,7 @@ export const newsData: Multilingual<News> = {
       title: "Invitation to Quote for Office Furniture",
       date: "2024-06-05",
       category: "Bidding Notices",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1703381132774-caeab4f6a9db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "We are seeking quotations for the supply and installation of new office furniture. Interested vendors can find the RFQ document on our portal."
     },
     {
@@ -121,7 +121,7 @@ export const newsData: Multilingual<News> = {
       title: "Holiday Schedule for National Day",
       date: "2024-06-01",
       category: "Work Schedule",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1722684768315-11fc753354f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "The department will be closed from September 2nd to September 3rd in observance of National Day. Normal operations will resume on September 4th."
     },
     {
@@ -130,7 +130,7 @@ export const newsData: Multilingual<News> = {
       title: "Cybersecurity Training for All Staff",
       date: "2024-05-28",
       category: "Activity Updates",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1478940020726-e9e191651f1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Mandatory cybersecurity training will be held for all staff members to enhance awareness and protect departmental data."
     },
     {
@@ -139,7 +139,7 @@ export const newsData: Multilingual<News> = {
       title: "Partnership with Local University for Internships",
       date: "2024-05-22",
       category: "Activity Updates",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1621439618797-2b99f50d17d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "A new partnership has been established with a local university to provide internship opportunities for students in public administration."
     },
     {
@@ -148,7 +148,7 @@ export const newsData: Multilingual<News> = {
       title: "Tender for Landscaping and Maintenance Services",
       date: "2024-05-18",
       category: "Bidding Notices",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1546085020-407431a34851?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "We are accepting tenders for a 3-year contract for landscaping and maintenance services for our office premises. The deadline is July 30, 2024."
     }
   ],
@@ -159,7 +159,7 @@ export const newsData: Multilingual<News> = {
       title: "Ra mắt Trung tâm Dịch vụ Công mới",
       date: "20-07-2024",
       category: "Activity Updates",
-      image: "https://images.unsplash.com/photo-1713948414133-c2cf74951e9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwNjY4NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1713948412274-d264923b2d81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Một trung tâm dịch vụ công hiện đại đã được khánh thành nhằm hợp lý hóa các dịch vụ cho người dân. Trung tâm được trang bị công nghệ hiện đại để giảm thời gian chờ đợi và nâng cao hiệu quả. Nơi đây sẽ cung cấp hơn 50 loại dịch vụ khác nhau."
     },
     {
@@ -168,7 +168,7 @@ export const newsData: Multilingual<News> = {
       title: "Thông báo mời thầu cung cấp văn phòng phẩm",
       date: "18-07-2024",
       category: "Bidding Notices",
-      image: "https://images.unsplash.com/photo-1737255287794-24ce61ded34a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwNjY4NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1737255287794-24ce61ded34a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Chúng tôi mời các nhà thầu đủ điều kiện nộp hồ sơ dự thầu kín cho việc mua sắm văn phòng phẩm cho năm tài chính 2025. Hạn chót nộp hồ sơ là ngày 15 tháng 8 năm 2024. Vui lòng tham khảo mục tài liệu để biết thông báo mời thầu chi tiết."
     },
     {
@@ -177,7 +177,7 @@ export const newsData: Multilingual<News> = {
       title: "Tổ chức Hội thảo Chuyển đổi số",
       date: "15-07-2024",
       category: "Activity Updates",
-      image: "https://images.unsplash.com/photo-1722684768315-11fc753354f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwNjY4NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1478940020726-e9e191651f1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Một hội thảo thành công về chuyển đổi số trong quản trị đã được tổ chức với sự tham dự của các chuyên gia trên cả nước. Các chủ đề chính bao gồm AI trong hành chính công, an ninh dữ liệu và các nền tảng chính phủ điện tử."
     },
     {
@@ -186,7 +186,7 @@ export const newsData: Multilingual<News> = {
       title: "Lịch công tác tháng 8 của phòng ban",
       date: "10-07-2024",
       category: "Work Schedule",
-      image: "https://images.unsplash.com/photo-1720025352295-953d7ad65b1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bmV3cyUyMGFydGljbGUlMjBnb3Zlcm5tZW50fGVufDB8fHx8MTc1MDY2ODY1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1737255287794-24ce61ded34a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Phòng ban đã công bố lịch làm việc và lịch họp cho tháng 8 năm 2024. Toàn thể nhân viên vui lòng kiểm tra cổng thông tin nội bộ để biết thời gian và chương trình chi tiết."
     },
     {
@@ -195,7 +195,7 @@ export const newsData: Multilingual<News> = {
       title: "Dự án hạ tầng lớn hoàn thành trước tiến độ",
       date: "05-07-2024",
       category: "Activity Updates",
-      image: "https://images.unsplash.com/photo-1621672134447-5c576fdef903?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwNjY4NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      image: "https://images.unsplash.com/photo-1621439618797-2b99f50d17d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Dự án mở rộng Quốc lộ 1 đã hoàn thành trước hai tháng so với kế hoạch, giúp giảm ùn tắc giao thông và tăng cường kết nối khu vực. Dự án là nỗ lực hợp tác giữa nhiều cơ quan chính phủ."
     },
     {
@@ -204,7 +204,7 @@ export const newsData: Multilingual<News> = {
       title: "Phòng ban nhận giải thưởng xuất sắc về dịch vụ công",
       date: "28-06-2024",
       category: "Activity Updates",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1703381132774-caeab4f6a9db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Phòng ban của chúng tôi đã được vinh danh với Giải thưởng Quốc gia về Dịch vụ Công xuất sắc vì sự cam kết của chúng tôi đối với tính minh bạch và các dịch vụ lấy người dân làm trung tâm."
     },
     {
@@ -213,7 +213,7 @@ export const newsData: Multilingual<News> = {
       title: "Mời thầu nâng cấp hạ tầng công nghệ thông tin",
       date: "25-06-2024",
       category: "Bidding Notices",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1621439618797-2b99f50d17d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Mời các nhà thầu tham gia đấu thầu nâng cấp toàn diện hạ tầng công nghệ thông tin, bao gồm máy chủ, hệ thống mạng và hệ thống bảo mật. Chi tiết có trong mục tài liệu."
     },
     {
@@ -222,7 +222,7 @@ export const newsData: Multilingual<News> = {
       title: "Lịch họp phòng ban tháng 9 năm 2024",
       date: "20-06-2024",
       category: "Work Schedule",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1478940020726-e9e191651f1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Xin thông báo lịch các cuộc họp của phòng ban trong tháng 9 năm 2024. Yêu cầu tất cả các trưởng phòng tham dự."
     },
     {
@@ -231,7 +231,7 @@ export const newsData: Multilingual<News> = {
       title: "Ra mắt cổng thông tin phản hồi của công dân mới",
       date: "15-06-2024",
       category: "Activity Updates",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1737255287794-24ce61ded34a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Chúng tôi rất vui mừng ra mắt cổng thông tin trực tuyến mới dành cho phản hồi của công dân, giúp công chúng dễ dàng chia sẻ đề xuất và báo cáo các vấn đề."
     },
     {
@@ -240,7 +240,7 @@ export const newsData: Multilingual<News> = {
       title: "Tổ chức thành công ngày hội hiến máu nhân đạo",
       date: "10-06-2024",
       category: "Activity Updates",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1703381132774-caeab4f6a9db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Phòng ban đã tổ chức thành công ngày hội hiến máu nhân đạo phối hợp với Hội Chữ thập đỏ, với hơn 200 nhân viên tham gia."
     },
     {
@@ -249,7 +249,7 @@ export const newsData: Multilingual<News> = {
       title: "Mời báo giá cung cấp nội thất văn phòng",
       date: "05-06-2024",
       category: "Bidding Notices",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1703381132774-caeab4f6a9db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Chúng tôi đang tìm kiếm báo giá cho việc cung cấp và lắp đặt nội thất văn phòng mới. Các nhà cung cấp quan tâm có thể tìm thấy tài liệu yêu cầu báo giá trên cổng thông tin của chúng tôi."
     },
     {
@@ -258,7 +258,7 @@ export const newsData: Multilingual<News> = {
       title: "Lịch nghỉ Lễ Quốc khánh",
       date: "01-06-2024",
       category: "Work Schedule",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1722684768315-11fc753354f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Phòng sẽ nghỉ làm việc từ ngày 2 tháng 9 đến hết ngày 3 tháng 9 để nghỉ Lễ Quốc khánh. Hoạt động bình thường sẽ trở lại vào ngày 4 tháng 9."
     },
     {
@@ -267,7 +267,7 @@ export const newsData: Multilingual<News> = {
       title: "Tổ chức tập huấn an ninh mạng cho toàn thể nhân viên",
       date: "28-05-2024",
       category: "Activity Updates",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1478940020726-e9e191651f1a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Buổi tập huấn an ninh mạng bắt buộc sẽ được tổ chức cho toàn thể nhân viên nhằm nâng cao nhận thức và bảo vệ dữ liệu của phòng ban."
     },
     {
@@ -276,7 +276,7 @@ export const newsData: Multilingual<News> = {
       title: "Hợp tác với trường đại học địa phương về chương trình thực tập",
       date: "22-05-2024",
       category: "Activity Updates",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1621439618797-2b99f50d17d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Một quan hệ đối tác mới đã được thiết lập với một trường đại học địa phương để cung cấp cơ hội thực tập cho sinh viên ngành hành chính công."
     },
     {
@@ -285,7 +285,7 @@ export const newsData: Multilingual<News> = {
       title: "Mời thầu dịch vụ chăm sóc và bảo trì cảnh quan",
       date: "18-05-2024",
       category: "Bidding Notices",
-      image: "https://placehold.co/600x400.png",
+      image: "https://images.unsplash.com/photo-1546085020-407431a34851?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwODQ0MDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Chúng tôi đang tiếp nhận hồ sơ dự thầu cho hợp đồng 3 năm về dịch vụ chăm sóc và bảo trì cảnh quan cho khuôn viên văn phòng. Hạn chót nộp hồ sơ là ngày 30 tháng 7 năm 2024."
     }
   ]
@@ -376,3 +376,4 @@ export const documentData: Multilingual<Document> = {
         { id: 6, name: "Tờ khai thuế 2024", type: "Biểu mẫu", agency: "Cục Thuế", year: 2024, format: "DOCX", fileUrl: "#" },
     ]
 };
+
