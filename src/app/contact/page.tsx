@@ -82,7 +82,7 @@ export default function ContactPage() {
                                 <MapPin className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                                 <div>
                                     <h4 className="font-semibold text-foreground">{t('address')}</h4>
-                                    <p>12 Nguyễn Văn Bảo, Phường 4, Gò Vấp, Thành phố Hồ Chí Minh</p>
+                                    <p>Trường Đại học Công nghiệp TP.HCM, 12 Nguyễn Văn Bảo, Phường 1, Gò Vấp, Hồ Chí Minh 700000</p>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
