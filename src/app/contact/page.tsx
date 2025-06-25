@@ -1,7 +1,7 @@
 "use client"
 import { Card } from "@/components/ui/card"
 import { IuhLogo } from "@/components/ui/iuh-logo"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, MapPin, Navigation } from "lucide-react"
 
 export default function ContactPage() {
     return (
@@ -33,7 +33,18 @@ export default function ContactPage() {
                         <div className="space-y-4 text-sm pt-6">
                             <div className="flex items-start gap-4">
                                 <MapPin className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
-                                <p>Tầng trệt - Nhà E - 12 Nguyễn Văn Bảo, P.1 Gò Vấp, Thành phố Hồ Chí Minh</p>
+                                <div>
+                                    <p>Tầng trệt - Nhà E - 12 Nguyễn Văn Bảo, P.4, Q. Gò Vấp, Thành phố Hồ Chí Minh</p>
+                                    <a
+                                        href="https://www.google.com/maps/dir/?api=1&destination=Industrial+University+of+Ho+Chi+Minh+City"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1 mt-1 text-sm font-medium text-primary hover:underline"
+                                    >
+                                        <Navigation className="h-4 w-4" />
+                                        Chỉ đường
+                                    </a>
+                                </div>
                             </div>
                             <div className="flex items-start gap-4">
                                 <Mail className="h-5 w-5 text-primary flex-shrink-0 mt-1" />
