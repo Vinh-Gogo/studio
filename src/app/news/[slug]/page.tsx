@@ -45,6 +45,7 @@ export default function NewsArticlePage({ params }: { params: { slug: string } }
           height={600}
           className="rounded-lg object-cover aspect-video mb-8 shadow-lg"
           data-ai-hint="news article government"
+          priority
         />
 
         <div className="prose prose-lg dark:prose-invert max-w-none text-foreground/90">
