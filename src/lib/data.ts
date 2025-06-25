@@ -1,3 +1,4 @@
+
 export type News = {
   id: number;
   slug: string;
@@ -59,6 +60,96 @@ export const newsData: Multilingual<News> = {
       category: "Activity Updates",
       image: "https://images.unsplash.com/photo-1621672134447-5c576fdef903?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwNjY4NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "The Highway 1 expansion project has been completed two months ahead of schedule, easing traffic congestion and boosting regional connectivity. The project was a collaborative effort between multiple government agencies."
+    },
+    {
+      id: 6,
+      slug: "public-service-excellence-award",
+      title: "Department Receives Award for Public Service Excellence",
+      date: "2024-06-28",
+      category: "Activity Updates",
+      image: "https://placehold.co/600x400.png",
+      content: "Our department was honored with the National Award for Public Service Excellence for our commitment to transparency and citizen-centric services."
+    },
+    {
+      id: 7,
+      slug: "tender-it-infrastructure-upgrade",
+      title: "Tender for IT Infrastructure Upgrade",
+      date: "2024-06-25",
+      category: "Bidding Notices",
+      image: "https://placehold.co/600x400.png",
+      content: "Bids are invited for the comprehensive upgrade of our IT infrastructure, including servers, networking, and security systems. Details are available in the documents section."
+    },
+    {
+      id: 8,
+      slug: "september-2024-meeting-schedule",
+      title: "September 2024 Departmental Meeting Schedule",
+      date: "2024-06-20",
+      category: "Work Schedule",
+      image: "https://placehold.co/600x400.png",
+      content: "Please be advised of the upcoming departmental meetings for September 2024. All heads of departments are required to attend."
+    },
+    {
+      id: 9,
+      slug: "citizen-feedback-portal-launch",
+      title: "Launch of New Citizen Feedback Portal",
+      date: "2024-06-15",
+      category: "Activity Updates",
+      image: "https://placehold.co/600x400.png",
+      content: "We are excited to launch a new online portal for citizen feedback, making it easier for the public to share suggestions and report issues."
+    },
+    {
+      id: 10,
+      slug: "successful-blood-donation-drive",
+      title: "Successful Blood Donation Drive Organized",
+      date: "2024-06-10",
+      category: "Activity Updates",
+      image: "https://placehold.co/600x400.png",
+      content: "The department successfully organized a blood donation drive in collaboration with the Red Cross, with over 200 employees participating."
+    },
+    {
+      id: 11,
+      slug: "quote-office-furniture",
+      title: "Invitation to Quote for Office Furniture",
+      date: "2024-06-05",
+      category: "Bidding Notices",
+      image: "https://placehold.co/600x400.png",
+      content: "We are seeking quotations for the supply and installation of new office furniture. Interested vendors can find the RFQ document on our portal."
+    },
+    {
+      id: 12,
+      slug: "national-day-holiday-schedule",
+      title: "Holiday Schedule for National Day",
+      date: "2024-06-01",
+      category: "Work Schedule",
+      image: "https://placehold.co/600x400.png",
+      content: "The department will be closed from September 2nd to September 3rd in observance of National Day. Normal operations will resume on September 4th."
+    },
+    {
+      id: 13,
+      slug: "cybersecurity-training-for-staff",
+      title: "Cybersecurity Training for All Staff",
+      date: "2024-05-28",
+      category: "Activity Updates",
+      image: "https://placehold.co/600x400.png",
+      content: "Mandatory cybersecurity training will be held for all staff members to enhance awareness and protect departmental data."
+    },
+    {
+      id: 14,
+      slug: "university-internship-partnership",
+      title: "Partnership with Local University for Internships",
+      date: "2024-05-22",
+      category: "Activity Updates",
+      image: "https://placehold.co/600x400.png",
+      content: "A new partnership has been established with a local university to provide internship opportunities for students in public administration."
+    },
+    {
+      id: 15,
+      slug: "tender-landscaping-maintenance",
+      title: "Tender for Landscaping and Maintenance Services",
+      date: "2024-05-18",
+      category: "Bidding Notices",
+      image: "https://placehold.co/600x400.png",
+      content: "We are accepting tenders for a 3-year contract for landscaping and maintenance services for our office premises. The deadline is July 30, 2024."
     }
   ],
   vi: [
@@ -106,6 +197,96 @@ export const newsData: Multilingual<News> = {
       category: "Activity Updates",
       image: "https://images.unsplash.com/photo-1621672134447-5c576fdef903?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxuZXdzJTIwYXJ0aWNsZSUyMGdvdmVybm1lbnR8ZW58MHx8fHwxNzUwNjY4NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       content: "Dự án mở rộng Quốc lộ 1 đã hoàn thành trước hai tháng so với kế hoạch, giúp giảm ùn tắc giao thông và tăng cường kết nối khu vực. Dự án là nỗ lực hợp tác giữa nhiều cơ quan chính phủ."
+    },
+    {
+      id: 6,
+      slug: "public-service-excellence-award",
+      title: "Phòng ban nhận giải thưởng xuất sắc về dịch vụ công",
+      date: "28-06-2024",
+      category: "Activity Updates",
+      image: "https://placehold.co/600x400.png",
+      content: "Phòng ban của chúng tôi đã được vinh danh với Giải thưởng Quốc gia về Dịch vụ Công xuất sắc vì sự cam kết của chúng tôi đối với tính minh bạch và các dịch vụ lấy người dân làm trung tâm."
+    },
+    {
+      id: 7,
+      slug: "tender-it-infrastructure-upgrade",
+      title: "Mời thầu nâng cấp hạ tầng công nghệ thông tin",
+      date: "25-06-2024",
+      category: "Bidding Notices",
+      image: "https://placehold.co/600x400.png",
+      content: "Mời các nhà thầu tham gia đấu thầu nâng cấp toàn diện hạ tầng công nghệ thông tin, bao gồm máy chủ, hệ thống mạng và hệ thống bảo mật. Chi tiết có trong mục tài liệu."
+    },
+    {
+      id: 8,
+      slug: "september-2024-meeting-schedule",
+      title: "Lịch họp phòng ban tháng 9 năm 2024",
+      date: "20-06-2024",
+      category: "Work Schedule",
+      image: "https://placehold.co/600x400.png",
+      content: "Xin thông báo lịch các cuộc họp của phòng ban trong tháng 9 năm 2024. Yêu cầu tất cả các trưởng phòng tham dự."
+    },
+    {
+      id: 9,
+      slug: "citizen-feedback-portal-launch",
+      title: "Ra mắt cổng thông tin phản hồi của công dân mới",
+      date: "15-06-2024",
+      category: "Activity Updates",
+      image: "https://placehold.co/600x400.png",
+      content: "Chúng tôi rất vui mừng ra mắt cổng thông tin trực tuyến mới dành cho phản hồi của công dân, giúp công chúng dễ dàng chia sẻ đề xuất và báo cáo các vấn đề."
+    },
+    {
+      id: 10,
+      slug: "successful-blood-donation-drive",
+      title: "Tổ chức thành công ngày hội hiến máu nhân đạo",
+      date: "10-06-2024",
+      category: "Activity Updates",
+      image: "https://placehold.co/600x400.png",
+      content: "Phòng ban đã tổ chức thành công ngày hội hiến máu nhân đạo phối hợp với Hội Chữ thập đỏ, với hơn 200 nhân viên tham gia."
+    },
+    {
+      id: 11,
+      slug: "quote-office-furniture",
+      title: "Mời báo giá cung cấp nội thất văn phòng",
+      date: "05-06-2024",
+      category: "Bidding Notices",
+      image: "https://placehold.co/600x400.png",
+      content: "Chúng tôi đang tìm kiếm báo giá cho việc cung cấp và lắp đặt nội thất văn phòng mới. Các nhà cung cấp quan tâm có thể tìm thấy tài liệu yêu cầu báo giá trên cổng thông tin của chúng tôi."
+    },
+    {
+      id: 12,
+      slug: "national-day-holiday-schedule",
+      title: "Lịch nghỉ Lễ Quốc khánh",
+      date: "01-06-2024",
+      category: "Work Schedule",
+      image: "https://placehold.co/600x400.png",
+      content: "Phòng sẽ nghỉ làm việc từ ngày 2 tháng 9 đến hết ngày 3 tháng 9 để nghỉ Lễ Quốc khánh. Hoạt động bình thường sẽ trở lại vào ngày 4 tháng 9."
+    },
+    {
+      id: 13,
+      slug: "cybersecurity-training-for-staff",
+      title: "Tổ chức tập huấn an ninh mạng cho toàn thể nhân viên",
+      date: "28-05-2024",
+      category: "Activity Updates",
+      image: "https://placehold.co/600x400.png",
+      content: "Buổi tập huấn an ninh mạng bắt buộc sẽ được tổ chức cho toàn thể nhân viên nhằm nâng cao nhận thức và bảo vệ dữ liệu của phòng ban."
+    },
+    {
+      id: 14,
+      slug: "university-internship-partnership",
+      title: "Hợp tác với trường đại học địa phương về chương trình thực tập",
+      date: "22-05-2024",
+      category: "Activity Updates",
+      image: "https://placehold.co/600x400.png",
+      content: "Một quan hệ đối tác mới đã được thiết lập với một trường đại học địa phương để cung cấp cơ hội thực tập cho sinh viên ngành hành chính công."
+    },
+    {
+      id: 15,
+      slug: "tender-landscaping-maintenance",
+      title: "Mời thầu dịch vụ chăm sóc và bảo trì cảnh quan",
+      date: "18-05-2024",
+      category: "Bidding Notices",
+      image: "https://placehold.co/600x400.png",
+      content: "Chúng tôi đang tiếp nhận hồ sơ dự thầu cho hợp đồng 3 năm về dịch vụ chăm sóc và bảo trì cảnh quan cho khuôn viên văn phòng. Hạn chót nộp hồ sơ là ngày 30 tháng 7 năm 2024."
     }
   ]
 };
