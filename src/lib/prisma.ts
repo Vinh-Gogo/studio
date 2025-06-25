@@ -1,3 +1,1 @@
-// This file is no longer in use as Prisma and database functionality have been removed.
-const prisma = null;
-export default prisma;
+// This file has been emptied as all database functionality has been removed from the project.
