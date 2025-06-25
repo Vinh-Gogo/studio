@@ -35,6 +35,7 @@ export default function ContactPage() {
                                 allowFullScreen={true}
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
+                                title="Bản đồ vị trí Trường Đại học Công nghiệp TP.HCM"
                             ></iframe>
                         </div>
                     </CardContent>
