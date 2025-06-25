@@ -131,7 +131,7 @@ export const translations = {
     address: 'Address',
     ourLocation: 'Our Location',
     contactViaFanpage: 'Contact via Fanpage',
-    fanpageContactPrompt: 'For any questions, please contact us via our Fanpage or the adjacent form for the fastest support.',
+    fanpageContactPrompt: 'For any questions, please contact us via our Fanpage or use the contact form for the fastest support.',
 
 
     // FAQ Page
@@ -288,7 +288,7 @@ export const translations = {
     address: 'Địa chỉ',
     ourLocation: 'Vị trí của chúng tôi',
     contactViaFanpage: 'Liên hệ qua Fanpage',
-    fanpageContactPrompt: 'Nếu có thắc mắc, vui lòng liên hệ với chúng tôi qua Fanpage hoặc biểu mẫu bên cạnh để được hỗ trợ nhanh nhất.',
+    fanpageContactPrompt: 'Nếu có thắc mắc, vui lòng liên hệ với chúng tôi qua Fanpage hoặc điền vào biểu mẫu liên hệ để được hỗ trợ nhanh nhất.',
 
     // FAQ Page
     faqTitle: 'Các câu hỏi thường gặp',

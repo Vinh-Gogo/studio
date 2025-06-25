@@ -126,6 +126,7 @@ export default function ContactPage() {
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
                                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                    title={t('contactViaFanpage')}
                                 ></iframe>
                             </div>
                         </CardContent>
