@@ -140,7 +140,15 @@ export function Header() {
             )
           }
           return (
-            <Button key={link.key} asChild variant={pathname === link.href ? "secondary" : "ghost"} className="w-full justify-start text-lg py-4 uppercase font-semibold">
+            <Button
+              key={link.key}
+              asChild
+              variant="ghost"
+              className={cn(
+                "w-full justify-start text-lg py-4 uppercase font-semibold",
+                pathname === link.href ? "bg-accent text-accent-foreground" : ""
+              )}
+            >
               <Link href={link.href!} onClick={() => setSheetOpen(false)}>{link.label}</Link>
             </Button>
           )
@@ -211,8 +219,11 @@ export function Header() {
           <Button
             key={link.key}
             asChild
-            variant={pathname === link.href ? "secondary" : "ghost"}
-            className="uppercase font-semibold"
+            variant="ghost"
+            className={cn(
+              "uppercase font-semibold",
+              pathname === link.href ? "bg-accent text-accent-foreground" : ""
+            )}
             onMouseEnter={() => setOpenMenuKey(null)}
           >
             <Link href={link.href!}>{link.label}</Link>
