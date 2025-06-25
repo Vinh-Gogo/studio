@@ -35,7 +35,7 @@ export default function ContactPage() {
                                 allowFullScreen={true}
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
-                                title="Bản đồ vị trí 12 Nguyễn Văn Bảo, Phường 1, Gò Vấp, Hồ Chí Minh"
+                                title="Bản đồ vị trí Trường Đại học Công nghiệp TP.HCM"
                             ></iframe>
                         </div>
                     </CardContent>
